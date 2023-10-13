@@ -13,22 +13,23 @@ export default function ThemeSwitcher() {
 
   function changeTheme() {
     setIsSelected(!isSelected)
-    !isSelected ? setTheme('light') : setTheme('dark')
+    theme === 'light' ? setTheme('dark') : setTheme('light')
   }
 
   return (
     <Switch
-      isSelected={isSelected}
+      isSelected={theme === 'light'}
       onValueChange={changeTheme}
-      size='sm'
-      color='primary'
+      defaultSelected
+      size="sm"
+      color="primary"
       thumbIcon={({ isSelected, className }) =>
         isSelected ? (
-        <SunIcon className={className} /> 
-      ) : (
-        <MoonIcon className={className} />
-      )}
-    >
-    </Switch>
+          <SunIcon className={className} />
+        ) : (
+          <MoonIcon className={className} />
+        )
+      }
+    ></Switch>
   )
 }

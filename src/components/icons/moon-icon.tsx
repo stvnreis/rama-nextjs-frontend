@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 export const MoonIcon = (props: any) => (
   <svg
     aria-hidden="true"
@@ -14,4 +14,4 @@ export const MoonIcon = (props: any) => (
       fill="currentColor"
     />
   </svg>
-);
+)

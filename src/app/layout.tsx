@@ -1,16 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
 import { Providers } from './providers'
 import { Header } from '../components/header'
 import Image from 'next/image'
-// import {Poppins} from 'next/font/google'
-
-// const poppins = Poppins({
-//   subsets: ['latin'],
-//   variable: '--font-poppins',
-//   weight: '400'
-// })
 
 export const metadata: Metadata = {
   title: 'Ramá Business',
@@ -26,14 +18,14 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         {/* <Image
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
-          className='opacity-10'
-          src='/rama.jpeg'
-          alt='fundo rama'
+          layout="fill"
+          objectFit="fill"
+          objectPosition="center"
+          className="opacity-40"
+          src="/yellow-background.jpg"
+          alt="fundo rama"
         /> */}
-        <Providers >
+        <Providers>
           <Header />
           <main>{children}</main>
           <footer></footer>
@@ -42,5 +34,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
