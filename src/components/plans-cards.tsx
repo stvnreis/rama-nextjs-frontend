@@ -19,7 +19,7 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
     <Card
       className={`flex flex-col min-w-full lg:min-w-min lg:w-72 min-h-[400px] h-auto border-yellow ${
         isMiddleCard
-          ? 'border-yellow-400 border-solid border-2 h-[450px] w-72'
+          ? 'border-yellow-400 border-solid border-2 h-auto w-72'
           : ''
       }`}
       isHoverable
