@@ -16,7 +16,7 @@ export default function Home() {
         </h2>
       </div>
       <Divider className="w-52 md:max-w-lg md:w-96 flex items-center justify-center" />
-      <div className="container flex flex-col md:flex-row justify-center py-8 gap-10">
+      <div className="container flex flex-col md:flex-row items-center justify-center py-8 gap-10">
         {plans.map((plan, index) => {
           return <PlansCards key={plan.name} name={plan.name} description={plan.description} title={plan.title} list={plan.list} value={plan.value} message={defaultMessage(index + 1)} />
         })}
