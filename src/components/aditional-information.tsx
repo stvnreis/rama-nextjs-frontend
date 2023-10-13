@@ -3,7 +3,7 @@ import { Card, CardBody } from '@nextui-org/react'
 export default function AditionalInformation() {
   return (
     <Card
-      className="w-full ms:w-[700px] border-[0.5px] border-primary"
+      className="mt-10 w-full sm:w-[800px] border-[0.5px] border-primary"
       radius="lg"
     >
       <CardBody className="dark:text-zinc-400 text-zinc-600">

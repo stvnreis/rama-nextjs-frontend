@@ -16,15 +16,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        {/* <Image
-          src="/rama-fundo.jpeg"
-          alt="fundo rama"
-          layout="fill"
-          objectFit="cover"
-          quality="100"
-          // objectPosition="center"
-          className="opacity-20"
-        /> */}
         <Providers>
           <Header />
           <main>{children}</main>
