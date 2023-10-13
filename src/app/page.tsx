@@ -13,23 +13,22 @@ const defaultMessage = (plan: string): string => {
 const imageItems = [
   <Image
     className="w-full h-full"
-    src="/recepcao-1.png"
+    src="https://drive.google.com/drive/folders/1YLC6ohMiggB5CoalSkeC_Zkkfgkgd4on"
     alt="card-1"
     key={1}
   />,
   <Image
     className="w-full h-full"
-    src="/sala-coworking-1.jpeg"
+    src="https://drive.google.com/drive/folders/1YLC6ohMiggB5CoalSkeC_Zkkfgkgd4on"
     alt="card-1"
     key={2}
   />,
 ]
 
 export default function Home() {
-  const images: string[] = ['/recepcao-1.png', '/sala-coworking-1.jpeg']
   return (
-    <div className="flex flex-col">
-      <div className="flex justify-center">
+    <div className="flex flex-col justify-center items-center">
+      <div>
         <Carousel items={imageItems} />
       </div>
       <div className="py-10 flex flex-col gap-2 items-center">

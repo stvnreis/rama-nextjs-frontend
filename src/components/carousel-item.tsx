@@ -17,7 +17,7 @@ export default function CarouselItem({
 
   const cssTransformProps = `
     rotateY(calc(   ${offset}    * 55deg))
-    scaleY(calc(1 + ${absOffset} * -0.1))
+    scaleY(calc(1 + ${absOffset} * -0.5))
     translateX(calc(${direction} * -3.5rem))
     translateZ(calc(${absOffset} * -35rem))
   `
