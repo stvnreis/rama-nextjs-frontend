@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Providers } from './providers'
 import { Header } from '../components/header'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Ramá Business',
@@ -18,12 +17,13 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         {/* <Image
-          layout="fill"
-          objectFit="fill"
-          objectPosition="center"
-          className="opacity-40"
-          src="/yellow-background.jpg"
+          src="/rama-fundo.jpeg"
           alt="fundo rama"
+          layout="fill"
+          objectFit="cover"
+          quality="100"
+          // objectPosition="center"
+          className="opacity-20"
         /> */}
         <Providers>
           <Header />

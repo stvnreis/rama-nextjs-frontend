@@ -1,20 +1,29 @@
 'use client'
 
+import Link from 'next/link'
 import { Button } from '@nextui-org/react'
 import { Smartphone } from 'lucide-react'
+
+const message =
+  'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.'
 
 export function ContactUs() {
   return (
     <div>
-      <Button
-        color="primary"
-        variant="solid"
-        radius="full"
-        className="text-black"
+      <Link
+        href={`https://wa.me/18997413773?text=${encodeURI(message)}`}
+        target="_blank"
       >
-        <Smartphone />
-        <span className="text-xs sm:text-sm">Entrar em Contato</span>
-      </Button>
+        <Button
+          color="primary"
+          variant="solid"
+          radius="full"
+          className="text-black hidden sm:flex"
+        >
+          <Smartphone />
+          <span className="sm:flex sm:text-sm">Entrar em Contato</span>
+        </Button>
+      </Link>
     </div>
   )
 }
