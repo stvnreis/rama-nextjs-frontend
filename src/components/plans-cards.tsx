@@ -4,6 +4,12 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
 } from '@nextui-org/react'
 import { CheckCircle2 } from 'lucide-react'
 import { PlansProps } from './texts/plans'
@@ -15,17 +21,19 @@ export interface CardProps {
 }
 
 export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure()
+
   return (
     <Card
-      className={`flex flex-col min-w-full md:min-w-min md:w-10/12 min-h-[400px] h-auto border-yellow ${
+      className={`flex flex-col min-w-full h-[500px] xl:min-w-min xl:w-1/2 xl:h-[500px] ${
         isMiddleCard
-          ? 'border-yellow-400 border-solid border-2 h-auto w-72'
+          ? 'border-yellow-400 border-solid border-2 h-auto w-72 xl:h-[550px]'
           : ''
       }`}
       isHoverable
       shadow="lg"
     >
-      <CardHeader className="flex flex-col gap-1 items-start">
+      <CardHeader className="flex flex-col items-start">
         <label className="text-sm font-semibold">{plan.name}</label>
         <div className="text-2xl font-bold">
           R${plan.value}
@@ -35,8 +43,14 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
           {plan.description}
         </span>
       </CardHeader>
-      <CardBody className="flex gap-5">
-        <span className="text-sm font-semibold">{plan.title}</span>
+      <CardBody className="flex flex-col gap-3">
+        <span
+          className={`text-sm font-semibold ${
+            plan.title === '' ? 'hidden' : ''
+          }`}
+        >
+          {plan.title}
+        </span>
         <div>
           <ul>
             {plan.list.map((item, index) => {
@@ -57,14 +71,48 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
         </div>
       </CardBody>
       <CardFooter className="flex items-center justify-center">
-        <a
-          href={`https://wa.me/18997468004?text=${encodeURI(message)}`}
-          target="_blank"
-        >
-          <Button color="primary" variant="ghost" radius="full">
-            Saiba Mais
-          </Button>
-        </a>
+        <Button color="primary" variant="ghost" radius="full" onPress={onOpen}>
+          Saiba Mais
+        </Button>
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1">
+                  Plano {plan.name}
+                </ModalHeader>
+                <ModalBody>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam pulvinar risus non risus hendrerit venenatis.
+                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam pulvinar risus non risus hendrerit venenatis.
+                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                  </p>
+                  <p>
+                    Magna exercitation reprehenderit magna aute tempor cupidatat
+                    consequat elit dolor adipisicing. Mollit dolor eiusmod sunt
+                    ex incididunt cillum quis. Velit duis sit officia eiusmod
+                    Lorem aliqua enim laboris do dolor eiusmod. Et mollit
+                    incididunt nisi consectetur esse laborum eiusmod pariatur
+                    proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+                  </p>
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Fechar
+                  </Button>
+                  {/* <Button color="primary" onPress={onClose}>
+                    Action
+                  </Button> */}
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
       </CardFooter>
     </Card>
   )

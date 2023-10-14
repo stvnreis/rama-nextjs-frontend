@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { ContactUs } from './contact-us'
 import {
+  Image,
   Link,
   Navbar,
   NavbarBrand,
@@ -19,6 +19,7 @@ export function Header() {
 
   const menuItems = [
     'Home',
+    'Entrar em contato',
     // 'Planos',
     // 'Localização',
     // 'Nosso Time',
@@ -29,14 +30,10 @@ export function Header() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="px-5 py-3 flex items-center justify-center"
+      className="py-3 flex sm:items-center sm:justify-center"
     >
-      <NavbarContent justify="start" className="md:pl-20">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
-        />
-        <NavbarBrand className="md:w-full">
+      <NavbarContent justify="start">
+        <NavbarBrand className="">
           <Image
             src="/logo-rama-sbg.png"
             alt="logo rama"
@@ -61,12 +58,16 @@ export function Header() {
           </NavbarItem>
         ))}
       </NavbarContent> */}
-      <NavbarContent justify="end" className="sm:pr-20">
+      <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex">
           <ContactUs />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="pt-10">
+      <NavbarMenuToggle
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        className="sm:hidden"
+      />
+      <NavbarMenu className="pt-10 flex flex-col items-end">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link color="foreground" className="w-full" href="#" size="lg">

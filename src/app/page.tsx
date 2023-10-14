@@ -46,7 +46,7 @@ export default function Home() {
           </h2>
         </div>
         <Divider className="w-52 md:max-w-lg md:w-96 flex items-center justify-center bg-black" />
-        <div className="container flex flex-col px-8 lg:flex-row items-center justify-center pt-16 gap-10">
+        <div className="container flex flex-col px-8 xl:flex-row items-center justify-center pt-16 gap-6">
           {plans.map((plan, index) => {
             return (
               <PlansCards

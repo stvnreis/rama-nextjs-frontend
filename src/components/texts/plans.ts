@@ -13,12 +13,7 @@ export const plans: PlansProps[] = [
       Escritório Virtual/Endereço Fiscal
     `,
     title: '',
-    list: [
-      'sala rotativa/coworking com ambiente climatizado, comporta até 05 pessoas',
-      'R$25/h das 07:30 as 17:30',
-      'R$40/h das 17:30 as 22:30',
-      'Descontos acima de 5hrs contratadas - valores a conferir',
-    ],
+    list: [],
     value: 80,
   },
   {
@@ -26,11 +21,10 @@ export const plans: PlansProps[] = [
     description: `
       cadeira exclusiva em ambiente compartilhado
     `,
-    title: 'Está Incluso:',
+    title: 'Incluso:',
     list: [
-      'Direito a 4 horas diárias',
-      'Cadeira exclusiva em ambiente compartilhado',
-      'Segunda a Sexta das 07:30 as 11:30 ou das 11:30 as 15:30',
+      '4 horas diárias',
+      'Segunda a Sexta das 07:30 as 11:30 ou 11:30 as 15:30',
     ],
     value: 300,
   },
@@ -39,11 +33,11 @@ export const plans: PlansProps[] = [
     description: `
       cadeira exclusiva em ambiente compartilhado
     `,
-    title: 'Está Incluso:',
+    title: 'Incluso:',
     list: [
-      'Direito a 8 horas diárias',
-      'Cadeira exclusiva em ambiente compartilhado',
-      'Segunda a sexta das 07:30 as 17:30 e sábado as 09:00 as 12h',
+      '8 horas diárias',
+      'Segunda a sexta das 07:30 as 17:30',
+      'Sábado as 09:00 as 12h',
     ],
     value: 500,
   },
