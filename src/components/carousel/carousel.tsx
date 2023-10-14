@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import CarouselItem from './carousel-item'
 
-import { ChevronRight } from 'lucide-react'
 import CarouselIndicator from './carousel-indicator'
 
 export interface CarouselProps {

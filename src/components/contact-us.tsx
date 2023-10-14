@@ -7,7 +7,11 @@ import { Smartphone } from 'lucide-react'
 const message =
   'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.'
 
-export function ContactUs() {
+export interface ContactUsProps {
+  className?: string
+}
+
+export function ContactUs({ className }: ContactUsProps) {
   return (
     <div>
       <Link
@@ -18,7 +22,7 @@ export function ContactUs() {
           color="primary"
           variant="solid"
           radius="full"
-          className="text-black hidden sm:flex"
+          className={`${className ?? 'text-black hidden sm:flex'}`}
         >
           <Smartphone />
           <span className="sm:flex sm:text-sm">Entrar em Contato</span>

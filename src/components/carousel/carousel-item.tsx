@@ -6,7 +6,7 @@ export interface ItemProps {
   activeIndex: number
   onChange: (index: number) => void
 }
-//
+
 export default function CarouselItem({
   children,
   index,
@@ -20,7 +20,7 @@ export default function CarouselItem({
   const cssTransformProps = `
     rotateY(calc(   ${offset}    * 55deg))
     scaleY(calc(1 + ${absOffset} * -0.5))
-    translateX(calc(${direction} * -5rem))
+    translateX(calc(${direction} * -3.5rem))
     translateZ(calc(${absOffset} * -35rem))
   `
 
@@ -32,17 +32,23 @@ export default function CarouselItem({
     ${Math.abs(index - activeIndex) >= 3 ? 'none' : 'block'}
   `
 
+  function handle(index: number, activeIndex: number) {
+    index === activeIndex ? openImage(index) : onChange(index)
+  }
+
+  function openImage(index: number) {
+    console.log('oi')
+  }
+
   return (
     <div
-      className={`carousel-item ${
-        index === activeIndex ? 'blur-none' : 'blur-sm hover:blur-none'
-      }`}
+      className="carousel-item"
       style={{
         transform: cssTransformProps,
         opacity: cssOpacity,
         display: cssDisplay,
       }}
-      onClick={() => onChange(index)}
+      onClick={() => handle(index, activeIndex)}
     >
       {children}
     </div>
