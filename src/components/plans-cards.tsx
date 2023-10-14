@@ -17,7 +17,7 @@ export interface CardProps {
 export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
   return (
     <Card
-      className={`flex flex-col min-w-full lg:min-w-min lg:w-72 min-h-[400px] h-auto border-yellow ${
+      className={`flex flex-col min-w-full md:min-w-min md:w-10/12 min-h-[400px] h-auto border-yellow ${
         isMiddleCard
           ? 'border-yellow-400 border-solid border-2 h-auto w-72'
           : ''

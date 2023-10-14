@@ -4,13 +4,20 @@ import { Divider, Image } from '@nextui-org/react'
 import { PlansCards } from '../components/plans-cards'
 import { plans } from '../components/texts/plans'
 import AditionalInformation from '../components/aditional-information'
-import Carousel from '../components/carousel'
+import Carousel from '../components/carousel/carousel'
 
 const defaultMessage = (plan: string): string => {
   return `Gostaria de saber mais sobre o plano ${plan}`
 }
 
 const imageItems = [
+  <Image
+    className="w-full h-full"
+    src="/sala-coworking-1.jpeg"
+    alt="card-1"
+    loading="lazy"
+    key={0}
+  />,
   <Image
     className="w-full h-full"
     src="/recepcao-1.png"
@@ -20,7 +27,7 @@ const imageItems = [
   />,
   <Image
     className="w-full h-full"
-    src="/sala-coworking-1.jpeg"
+    src="/rama-frente-1.jpeg"
     alt="card-1"
     loading="lazy"
     key={2}
@@ -39,7 +46,7 @@ export default function Home() {
           </h2>
         </div>
         <Divider className="w-52 md:max-w-lg md:w-96 flex items-center justify-center bg-black" />
-        <div className="container flex flex-col px-8 lg:flex-row items-center justify-center pt-16 gap-10">
+        <div className="container flex flex-col px-8 md:flex-row items-center justify-center pt-16 gap-10">
           {plans.map((plan, index) => {
             return (
               <PlansCards
