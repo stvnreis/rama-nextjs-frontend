@@ -10,15 +10,16 @@ export const plans: PlansProps[] = [
   {
     name: 'Básico',
     description: `
-      sala rotativa/coworking com ambiente climatizado, comporta até 05 pessoas
+      Escritório Virtual/Endereço Fiscal
     `,
-    title: 'Está Incluso:',
+    title: '',
     list: [
+      'sala rotativa/coworking com ambiente climatizado, comporta até 05 pessoas',
       'R$25/h das 07:30 as 17:30',
       'R$40/h das 17:30 as 22:30',
       'Descontos acima de 5hrs contratadas - valores a conferir',
     ],
-    value: 200,
+    value: 80,
   },
   {
     name: 'Essencial',
