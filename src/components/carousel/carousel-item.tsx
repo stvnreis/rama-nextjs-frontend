@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import ImageModal from '../image/image-modal'
 import {
   Modal,
   ModalContent,
@@ -7,6 +6,7 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
+  ModalHeader,
 } from '@nextui-org/react'
 
 export interface ItemProps {
@@ -58,21 +58,37 @@ export default function CarouselItem({
       onClick={() => handle(index, activeIndex)}
     >
       {children}
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        radius="md"
+        size="2xl"
+        placement="center"
+        className="bg-black bg-opacity-95"
+      >
         <ModalContent>
           {(onClose) => (
             <>
-              {/* <ModalHeader className="flex flex-col gap-1">
-              Plano {plan.name}
-            </ModalHeader> */}
-              <ModalBody className="w-full h-full">{children}</ModalBody>
+              <ModalHeader className="flex flex-col gap-1 text-primary">
+                Plano
+              </ModalHeader>
+              <ModalBody>
+                <div
+                  style={{
+                    position: 'relative',
+                    height: '400px',
+                  }}
+                >
+                  {children}
+                </div>
+              </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Fechar
                 </Button>
                 {/* <Button color="primary" onPress={onClose}>
-                    Action
-                  </Button> */}
+                  Action
+                </Button> */}
               </ModalFooter>
             </>
           )}

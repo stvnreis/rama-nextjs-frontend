@@ -1,6 +1,7 @@
 'use client'
 
-import { Divider, Image } from '@nextui-org/react'
+import Image from 'next/image'
+import { Divider } from '@nextui-org/react'
 import { PlansCards } from '../components/plans-cards'
 import { plans } from '../components/texts/plans'
 import AditionalInformation from '../components/aditional-information'
@@ -14,24 +15,55 @@ const defaultMessage = (plan: string): string => {
 const imageItems = [
   <Image
     className="w-full h-full"
-    src="/sala-coworking-1.jpeg"
+    src="https://drive.google.com/uc?export=view&id=1mqluxl7HgaFdFQkvi0c5gViZvUHvb1Uh"
     alt="card-1"
     loading="lazy"
+    // radius="none"
+    fill
+    sizes="100vw"
+    style={{
+      objectFit: 'cover',
+    }}
     key={0}
   />,
   <Image
     className="w-full h-full"
-    src="/recepcao-1.png"
+    src="https://drive.google.com/uc?export=view&id=1Owt8TeGtF7OJP1RlRndrF4UAENARS6ou"
     alt="card-1"
     loading="lazy"
+    // radius="none"
+    fill
+    sizes="400vw"
+    style={{
+      objectFit: 'cover',
+    }}
     key={1}
   />,
   <Image
     className="w-full h-full"
-    src="/rama-frente-1.jpeg"
+    src="https://drive.google.com/uc?export=view&id=1wIkX_5BwIQ0DZS6-gnvUlj46XkQtQxxm"
     alt="card-1"
     loading="lazy"
+    // radius="none"
+    fill
+    sizes="100vw"
+    style={{
+      objectFit: 'cover',
+    }}
     key={2}
+  />,
+  <Image
+    className="w-full h-full"
+    src="https://drive.google.com/uc?export=view&id=11euqIsY7HOEJsw-L67THio7rqTHfzTvj"
+    alt="card-1"
+    loading="lazy"
+    // radius="none"
+    fill
+    sizes="100vw"
+    style={{
+      objectFit: 'cover',
+    }}
+    key={3}
   />,
 ]
 
