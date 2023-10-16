@@ -1,4 +1,13 @@
 import { ReactNode } from 'react'
+import {
+  Modal,
+  ModalContent,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+  ModalHeader,
+} from '@nextui-org/react'
 
 export interface ItemProps {
   children?: ReactNode
@@ -13,6 +22,8 @@ export default function CarouselItem({
   activeIndex,
   onChange,
 }: ItemProps) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure()
+
   const offset = (index - activeIndex) / 4
   const direction = Math.sign(index - activeIndex)
   const absOffset = Math.abs(offset)
@@ -33,11 +44,7 @@ export default function CarouselItem({
   `
 
   function handle(index: number, activeIndex: number) {
-    index === activeIndex ? openImage(index) : onChange(index)
-  }
-
-  function openImage(index: number) {
-    console.log('oi')
+    index === activeIndex ? onOpen() : onChange(index)
   }
 
   return (
@@ -51,6 +58,42 @@ export default function CarouselItem({
       onClick={() => handle(index, activeIndex)}
     >
       {children}
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        radius="md"
+        size="2xl"
+        placement="center"
+        className="bg-black bg-opacity-95"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1 text-primary">
+                Plano
+              </ModalHeader>
+              <ModalBody>
+                <div
+                  style={{
+                    position: 'relative',
+                    height: '400px',
+                  }}
+                >
+                  {children}
+                </div>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Fechar
+                </Button>
+                {/* <Button color="primary" onPress={onClose}>
+                  Action
+                </Button> */}
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   )
 }
