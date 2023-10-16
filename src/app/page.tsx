@@ -12,7 +12,7 @@ const defaultMessage = (plan: string): string => {
   return `Gostaria de saber mais sobre o plano ${plan}`
 }
 
-const imageItems = [
+const items = [
   <Image
     className="w-full h-full"
     src="https://drive.google.com/uc?export=view&id=1mqluxl7HgaFdFQkvi0c5gViZvUHvb1Uh"
@@ -70,7 +70,7 @@ const imageItems = [
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <Carousel items={imageItems} />
+      <Carousel items={items} />
       <div className="py-10 flex flex-col gap-2 items-center">
         <div className="max-w-xs md:max-w-xl flex items-center justify-center pt-20">
           <h2 className="text-md md:text-3xl font-semibold text-center md:w-full">
