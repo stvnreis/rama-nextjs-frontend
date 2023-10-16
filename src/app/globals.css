@@ -38,4 +38,8 @@
   .carousel-indicator-container {
     @apply absolute rotate-180 left-1/2 -bottom-6 flex h-5 w-24 -translate-x-1/2 transform items-center justify-center space-x-1;
   }
+
+  .service-card {
+    @apply hover:-translate-y-4 hover:text-primary;
+  }
 }

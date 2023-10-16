@@ -5,6 +5,7 @@ import { PlansCards } from '../components/plans-cards'
 import { plans } from '../components/texts/plans'
 import AditionalInformation from '../components/aditional-information'
 import Carousel from '../components/carousel/carousel'
+import OurServices from '../components/services/our-services'
 
 const defaultMessage = (plan: string): string => {
   return `Gostaria de saber mais sobre o plano ${plan}`
@@ -60,6 +61,7 @@ export default function Home() {
         </div>
         <AditionalInformation />
       </div>
+      <OurServices />
     </div>
   )
 }
