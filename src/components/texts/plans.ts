@@ -1,10 +1,10 @@
 export interface PlansProps {
-  name: string
-  description: string
-  title: string
-  list: string[]
-  value: number
-  text: string[]
+  name: string;
+  description: string;
+  title: string;
+  list: string[];
+  value: number;
+  text: string[];
 }
 
 export const plans: PlansProps[] = [
@@ -67,4 +67,4 @@ export const plans: PlansProps[] = [
       'Disponibilizamos   Wi-fi sem custo adicional e água mineral',
     ],
   },
-]
+];

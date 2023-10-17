@@ -1,7 +1,5 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { ContactUs } from './contact-us'
 import {
   Image,
   Link,
@@ -12,10 +10,13 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from '@nextui-org/react'
+} from '@nextui-org/react';
+import React from 'react';
+
+import { ContactUs } from './contact-us';
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
     'Home',
@@ -24,7 +25,7 @@ export function Header() {
     // 'Localização',
     // 'Nosso Time',
     // 'Empresas Parceiras',
-  ]
+  ];
 
   return (
     <Navbar
@@ -77,5 +78,5 @@ export function Header() {
         ))}
       </NavbarMenu>
     </Navbar>
-  )
+  );
 }

@@ -1,21 +1,17 @@
-export interface CarouselIndicatorProps {
-  activeIndex: number
-  length: number
-  maxIndicatorVisible?: number
-  onChange: (index: number) => void
-}
+export type CarouselIndicatorProps = {
+  activeIndex: number;
+  length: number;
+  onChange: (index: number) => void;
+};
 
 export default function CarouselIndicator({
   activeIndex,
   length,
-  maxIndicatorVisible = 5,
   onChange,
 }: CarouselIndicatorProps) {
-  const maxIndicator =
-    length > maxIndicatorVisible ? maxIndicatorVisible : length
   return (
     <div className="carousel-indicator-container">
-      {Array.from(Array(maxIndicator), (_, index) => {
+      {Array.from(Array(length), (_, index) => {
         return (
           <div
             key={index}
@@ -26,8 +22,8 @@ export default function CarouselIndicator({
             }`}
             onClick={() => onChange(index)}
           />
-        )
+        );
       })}
     </div>
-  )
+  );
 }

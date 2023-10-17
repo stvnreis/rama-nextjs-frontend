@@ -10,7 +10,7 @@
   }
 
   .carousel-item {
-    @apply absolute h-full w-full cursor-pointer overflow-hidden 
+    @apply absolute h-full w-full cursor-pointer overflow-hidden
     rounded-3xl drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-1000 ease-in-out;
   }
 
@@ -21,7 +21,7 @@
     text-2xl opacity-75 transition duration-1000 hover:opacity-100 md:h-12 md:w-12;
   }
 
-  .carousel-btn-switch-card-left {
+  /* .carousel-btn-switch-card-left {
     @apply right-1/2 top-1/2 translate-x-[-150px] translate-y-[-50%] transform sm:translate-x-[-200px] 
     md:translate-x-[-300px] lg:translate-x-[-400px] xl:translate-x-[-500px] 2xl:translate-x-[-650px];
   }
@@ -29,17 +29,25 @@
   .carousel-btn-switch-card-right {
     @apply top-1/2 left-1/2 translate-x-[150px] translate-y-[-50%] transform sm:translate-x-[200px] 
     md:translate-x-[300px] lg:translate-x-[400px] xl:translate-x-[500px] 2xl:translate-x-[650px];
-  }
+  } */
   
   .carousel-indicator-dots {
     @apply h-2 w-2 rounded-full bg-zinc-500 opacity-50 transition-all duration-500 hover:w-4 hover:opacity-100;
   }
   
   .carousel-indicator-container {
-    @apply absolute rotate-180 left-1/2 -bottom-6 flex h-5 w-24 -translate-x-1/2 transform items-center justify-center space-x-1;
+    @apply absolute rotate-180 left-1/2 -bottom-6 flex h-5 w-fit -translate-x-1/2 transform items-center justify-center space-x-1;
   }
 
   .service-card {
-    @apply hover:-translate-y-4 hover:text-primary w-1/3;
+    @apply hover:-translate-y-4 hover:text-primary w-1/4;
+  }
+
+  .service-card-body {
+    @apply flex flex-col items-center justify-center gap-1;
+  }
+  
+  .service-card-body-text {
+    @apply text-center text-xs lg:text-lg;
   }
 }

@@ -1,16 +1,37 @@
-import React, { ReactNode } from 'react'
-import CarouselItem from './carousel-item'
+import { CircularProgress } from '@nextui-org/react';
+import Image from 'next/image';
+import React from 'react';
 
-import CarouselIndicator from './carousel-indicator'
+import CarouselIndicator from './carousel-indicator';
+import CarouselItem from './carousel-item';
 
-export interface CarouselProps {
-  width?: number
-  height?: number
-  items: ReactNode[]
-}
+import { DriveFile } from '@/types/drive-files';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
-export default function Carousel({ width, height, items }: CarouselProps) {
-  const [activeIndex, setActiveIndex] = React.useState<number>(0)
+export type CarouselProps = {
+  width?: number;
+  height?: number;
+};
+
+type Data = {
+  files: DriveFile[];
+};
+
+export default function Carousel({ width, height }: CarouselProps) {
+  const { data, isLoading, isError } = useQuery<Data>({
+    queryKey: ['images'],
+    queryFn: async () => {
+      const { data } = await axios.get('/api/drive-images');
+
+      return data;
+    },
+  });
+
+  const length = data?.files.length ?? 0;
+  const startingIndex = Math.floor(length / 2);
+
+  const [activeIndex, setActiveIndex] = React.useState<number>(startingIndex);
 
   // function handleNextItemBtn() {
   //   setActiveIndex((prev) => {
@@ -24,6 +45,9 @@ export default function Carousel({ width, height, items }: CarouselProps) {
   //   })
   // }
 
+  if (isLoading) return <CircularProgress aria-label="Carregando Imagens" />;
+  if (isError) return <div>Error</div>;
+
   return (
     <div className="carousel-container">
       {/* {activeIndex > 0 && (
@@ -34,16 +58,31 @@ export default function Carousel({ width, height, items }: CarouselProps) {
           <ChevronRight className="rotate-180 text-white" />
         </button>
       )} */}
-      {items.map((item, index) => (
-        <CarouselItem
-          key={index}
-          index={index}
-          activeIndex={activeIndex}
-          onChange={(index) => setActiveIndex(index)}
-        >
-          {items}
-        </CarouselItem>
-      ))}
+      {data?.files.map((file, index) => {
+        return (
+          <CarouselItem
+            key={index}
+            index={index}
+            activeIndex={activeIndex}
+            onChange={(index) => setActiveIndex(index)}
+          >
+            <Image
+              className="w-full h-full border-r-medium"
+              src={`https://drive.google.com/uc?export=view&id=${file.id}`}
+              alt="card-1"
+              loading="lazy"
+              // radius="none"
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: 'cover',
+                borderRadius: '5px',
+              }}
+              key={index}
+            />
+          </CarouselItem>
+        );
+      })}
       {/* {activeIndex < items.length - 1 && (
         <button
           className="carousel-btn-switch-card-right carousel-btn-switch-card"
@@ -54,9 +93,9 @@ export default function Carousel({ width, height, items }: CarouselProps) {
       )} */}
       <CarouselIndicator
         activeIndex={activeIndex}
-        length={items.length}
+        length={length}
         onChange={(index) => setActiveIndex(index)}
       />
     </div>
-  )
+  );
 }
