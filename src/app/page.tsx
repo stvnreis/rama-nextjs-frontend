@@ -31,7 +31,6 @@ export default function Home() {
                 key={index}
                 plan={plan}
                 isMiddleCard={index === Math.floor(plans.length / 2)}
-                message={defaultMessage(plan.name)}
               />
             );
           })}
