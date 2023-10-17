@@ -1,8 +1,23 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+
+import { limiter } from '../config/limiter';
 
 import { google } from 'googleapis';
 
 export async function GET(req: NextRequest) {
+  const origin = req.headers.get('origin');
+
+  const remaining = await limiter.removeTokens(1);
+  if (remaining < 0)
+    return new Response(null, {
+      status: 429,
+      statusText: 'too may request',
+      headers: {
+        'Access-Control-Allow-Origin': origin || '*',
+        'Content-Type': 'text/plain',
+      },
+    });
+
   const oauth2Client = new google.auth.OAuth2(
     process.env.CLIENT_ID,
     process.env.CLIENT_SECRET,
@@ -23,5 +38,10 @@ export async function GET(req: NextRequest) {
 
   const response = await drive.files.list();
 
-  return new Response(JSON.stringify({ files: response.data.files }));
+  return new NextResponse(JSON.stringify({ files: response.data.files }), {
+    headers: {
+      'Access-Control-Allow-Origin': origin || '*',
+      'Content-Type': 'application/json',
+    },
+  });
 }
