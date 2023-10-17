@@ -25,9 +25,9 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
 
   return (
     <Card
-      className={`flex flex-col gap-1 min-w-full h-[350px] xl:min-w-min xl:w-1/2 xl:h-[330px] ${
+      className={`flex flex-col gap-1 min-w-full h-[350px] xl:min-w-min xl:w-1/2 xl:h-[400px] ${
         isMiddleCard
-          ? 'border-primary border-solid border-2 w-72 xl:h-[350px]'
+          ? 'border-primary border-solid border-2 w-72 xl:h-[430px]'
           : ''
       }`}
       isHoverable
@@ -55,7 +55,7 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
           <ul>
             {plan.list.map((item, index) => {
               return (
-                <li key={index} className="flex flex-col text-sm mt-1">
+                <li key={index} className="flex flex-col text-xs mt-1">
                   <div className="flex justify-start items-center">
                     <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
                       <CheckCircle2 size={30} />
@@ -74,7 +74,7 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
         <Button color="primary" variant="ghost" radius="full" onPress={onOpen}>
           Saiba Mais
         </Button>
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl">
           <ModalContent>
             {(onClose) => (
               <>
@@ -82,24 +82,9 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
                   Plano {plan.name}
                 </ModalHeader>
                 <ModalBody>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam pulvinar risus non risus hendrerit venenatis.
-                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam pulvinar risus non risus hendrerit venenatis.
-                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                  </p>
-                  <p>
-                    Magna exercitation reprehenderit magna aute tempor cupidatat
-                    consequat elit dolor adipisicing. Mollit dolor eiusmod sunt
-                    ex incididunt cillum quis. Velit duis sit officia eiusmod
-                    Lorem aliqua enim laboris do dolor eiusmod. Et mollit
-                    incididunt nisi consectetur esse laborum eiusmod pariatur
-                    proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
-                  </p>
+                  {plan.text.map((text, index) => (
+                    <p key={index}>{text}</p>
+                  ))}
                 </ModalBody>
                 <ModalFooter>
                   <Button color="danger" variant="light" onPress={onClose}>

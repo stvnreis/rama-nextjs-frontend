@@ -1,9 +1,7 @@
 import React, { ReactNode } from 'react'
 import CarouselItem from './carousel-item'
-import Image from 'next/image'
 
 import CarouselIndicator from './carousel-indicator'
-import { google } from 'googleapis'
 
 export interface CarouselProps {
   width?: number
@@ -43,7 +41,7 @@ export default function Carousel({ width, height, items }: CarouselProps) {
           activeIndex={activeIndex}
           onChange={(index) => setActiveIndex(index)}
         >
-          {item}
+          {items}
         </CarouselItem>
       ))}
       {/* {activeIndex < items.length - 1 && (

@@ -20,7 +20,7 @@ const items = [
     loading="lazy"
     // radius="none"
     fill
-    sizes="100vw"
+    sizes="400vw"
     style={{
       objectFit: 'cover',
     }}
@@ -46,7 +46,7 @@ const items = [
     loading="lazy"
     // radius="none"
     fill
-    sizes="100vw"
+    sizes="400vw"
     style={{
       objectFit: 'cover',
     }}
@@ -59,7 +59,7 @@ const items = [
     loading="lazy"
     // radius="none"
     fill
-    sizes="100vw"
+    sizes="400vw"
     style={{
       objectFit: 'cover',
     }}
