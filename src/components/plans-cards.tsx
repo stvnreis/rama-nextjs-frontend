@@ -85,6 +85,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
         <Modal
           isOpen={isOpen}
           onOpenChange={onOpenChange}
+          scrollBehavior="outside"
           size="xl"
           backdrop="blur"
         >

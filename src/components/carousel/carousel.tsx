@@ -67,13 +67,13 @@ export default function Carousel({ width, height }: CarouselProps) {
             onChange={(index) => setActiveIndex(index)}
           >
             <Image
-              className="w-full h-full border-r-medium"
+              className="w-full h-full"
               src={`https://drive.google.com/uc?export=view&id=${file.id}`}
-              alt="card-1"
+              alt={file.name}
               loading="lazy"
               // radius="none"
               fill
-              sizes="100vw"
+              sizes="400vw"
               style={{
                 objectFit: 'cover',
                 borderRadius: '5px',
