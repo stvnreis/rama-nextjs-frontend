@@ -13,7 +13,7 @@ export default function AboutUs() {
           comercial e fiscal sem as preocupações de um escritório tradicional.
         </p>
         <p>
-          Assinantes B.OFFICE também pode contratar escritórios, sala de
+          Assinantes RAMÁ Business também pode contratar escritórios, sala de
           reunião, sala de atendimento e sala clinica sob demanda
         </p>
       </div>
