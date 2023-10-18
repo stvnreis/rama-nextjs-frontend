@@ -1,8 +1,8 @@
 'use client';
 
 import {
-  Image,
   Link,
+  Image,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -36,13 +36,15 @@ export function Header() {
       className="py-3 flex sm:items-center sm:justify-center"
     >
       <NavbarContent justify="start">
-        <NavbarBrand className="">
-          <Image
-            src="/logo-rama-sbg.png"
-            alt="logo rama"
-            width={200}
-            height={200}
-          />
+        <NavbarBrand>
+          <Link href="/">
+            <Image
+              src="/logo-rama-sbg.png"
+              alt="logo rama"
+              width={200}
+              height={200}
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
       {/* <NavbarContent className="hidden sm:flex gap-5" justify="center">

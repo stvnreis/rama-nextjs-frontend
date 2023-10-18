@@ -13,7 +13,7 @@ import {
 
 export default function OurServices() {
   return (
-    <div className="flex flex-col justify-center items-center gap-3 mx-5 md:mx-10 2xl:mx-0 w-fit">
+    <div className="flex flex-col justify-center items-center gap-2 md:gap-4 mx-5 md:mx-10 2xl:mx-0 w-fit">
       <div className="flex gap-3 w-fit">
         <Card className="service-card">
           <CardBody className="service-card-body">
@@ -23,7 +23,7 @@ export default function OurServices() {
         </Card>
         <Card className="service-card">
           <CardBody className="service-card-body">
-            <Wifi className="w-20 lg:w-full" />
+            <Wifi size={30} />
             <span className="service-card-body-text">
               Wifi de alta velocidade
             </span>
