@@ -9,16 +9,11 @@ import { DriveFile } from '@/types/drive-files';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-export type CarouselProps = {
-  width?: number;
-  height?: number;
-};
-
 type Data = {
   files: DriveFile[];
 };
 
-export default function Carousel({ width, height }: CarouselProps) {
+export default function Carousel() {
   const { data, isLoading, isError } = useQuery<Data>({
     queryKey: ['images'],
     queryFn: async () => {
@@ -29,9 +24,8 @@ export default function Carousel({ width, height }: CarouselProps) {
   });
 
   const length = data?.files.length ?? 0;
-  const startingIndex = Math.floor(length / 2);
 
-  const [activeIndex, setActiveIndex] = React.useState<number>(startingIndex);
+  const [activeIndex, setActiveIndex] = React.useState<number>(0);
 
   // function handleNextItemBtn() {
   //   setActiveIndex((prev) => {
@@ -70,7 +64,7 @@ export default function Carousel({ width, height }: CarouselProps) {
               className="w-full h-full"
               src={`https://drive.google.com/uc?export=view&id=${file.id}`}
               alt={file.name}
-              loading="lazy"
+              loading="eager"
               // radius="none"
               fill
               sizes="400vw"

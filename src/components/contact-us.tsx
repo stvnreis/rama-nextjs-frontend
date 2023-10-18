@@ -3,8 +3,6 @@
 import { Button } from '@nextui-org/react';
 import Link from 'next/link';
 
-import { Smartphone } from 'lucide-react';
-
 const message =
   'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.';
 

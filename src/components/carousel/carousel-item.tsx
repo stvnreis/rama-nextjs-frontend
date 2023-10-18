@@ -24,23 +24,25 @@ export default function CarouselItem({
 }: ItemProps) {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
+  const max_visibility = 3;
+
   const offset = (index - activeIndex) / 4;
   const direction = Math.sign(index - activeIndex);
   const absOffset = Math.abs(offset);
 
   const cssTransformProps = `
-    rotateY(calc(   ${offset}    * 55deg))
-    scaleY(calc(1 + ${absOffset} * -0.5))
-    translateX(calc(${direction} * -3.5rem))
-    translateZ(calc(${absOffset} * -35rem))
+    rotateY(calc(   ${offset}    * 50deg))
+    scaleY(calc(1 + ${absOffset} * -0.6))
+    translateX(calc(${direction} * -5rem))
+    translateZ(calc(${absOffset} * -30rem))
   `;
 
   const cssOpacity = `
-    ${Math.abs(index - activeIndex) >= 3 ? '0' : '1'}
+    ${Math.abs(index - activeIndex) >= max_visibility ? '0' : '1'}
   `;
 
   const cssDisplay = `
-    ${Math.abs(index - activeIndex) >= 3 ? 'none' : 'block'}
+    ${Math.abs(index - activeIndex) >= max_visibility ? 'none' : 'block'}
   `;
 
   function handle(index: number, activeIndex: number) {
