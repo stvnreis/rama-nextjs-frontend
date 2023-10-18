@@ -10,24 +10,26 @@ import {
   ModalFooter,
   ModalHeader,
   useDisclosure,
-} from '@nextui-org/react'
-import { CheckCircle2 } from 'lucide-react'
-import { PlansProps } from './texts/plans'
+} from '@nextui-org/react';
+
+import { money } from '../utils/format';
+import { PlansProps } from './texts/plans';
+
+import { CheckCircle2 } from 'lucide-react';
 
 export interface CardProps {
-  message: string
-  isMiddleCard: boolean
-  plan: PlansProps
+  isMiddleCard: boolean;
+  plan: PlansProps;
 }
 
-export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure()
+export function PlansCards({ plan, isMiddleCard }: CardProps) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <Card
-      className={`flex flex-col gap-1 min-w-full h-[350px] xl:min-w-min xl:w-1/2 xl:h-[330px] ${
+      className={`flex flex-col gap-1 min-w-full h-[350px] xl:min-w-min xl:w-1/2 xl:h-[400px] ${
         isMiddleCard
-          ? 'border-primary border-solid border-2 w-72 xl:h-[350px]'
+          ? 'border-primary border-solid border-2 w-72 xl:h-[430px]'
           : ''
       }`}
       isHoverable
@@ -36,7 +38,7 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
       <CardHeader className="flex flex-col items-start">
         <label className="text-sm font-semibold">{plan.name}</label>
         <div className="text-2xl font-bold">
-          R${plan.value}
+          {money(plan.value)}
           <span className="text-primary">/mês</span>
         </div>
         <span className="text-sm italic dark:text-zinc-400 text-zinc-600">
@@ -55,7 +57,7 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
           <ul>
             {plan.list.map((item, index) => {
               return (
-                <li key={index} className="flex flex-col text-sm mt-1">
+                <li key={index} className="flex flex-col text-xs mt-1">
                   <div className="flex justify-start items-center">
                     <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
                       <CheckCircle2 size={30} />
@@ -65,16 +67,28 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
                     </span>
                   </div>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
       </CardBody>
       <CardFooter className="flex items-center justify-center">
-        <Button color="primary" variant="ghost" radius="full" onPress={onOpen}>
+        <Button
+          color="primary"
+          variant="ghost"
+          radius="full"
+          onPress={onOpen}
+          className="hover:text-black"
+        >
           Saiba Mais
         </Button>
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <Modal
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          scrollBehavior="outside"
+          size="xl"
+          backdrop="blur"
+        >
           <ModalContent>
             {(onClose) => (
               <>
@@ -82,24 +96,9 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
                   Plano {plan.name}
                 </ModalHeader>
                 <ModalBody>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam pulvinar risus non risus hendrerit venenatis.
-                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam pulvinar risus non risus hendrerit venenatis.
-                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                  </p>
-                  <p>
-                    Magna exercitation reprehenderit magna aute tempor cupidatat
-                    consequat elit dolor adipisicing. Mollit dolor eiusmod sunt
-                    ex incididunt cillum quis. Velit duis sit officia eiusmod
-                    Lorem aliqua enim laboris do dolor eiusmod. Et mollit
-                    incididunt nisi consectetur esse laborum eiusmod pariatur
-                    proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
-                  </p>
+                  {plan.text.map((text, index) => (
+                    <p key={index}>{text}</p>
+                  ))}
                 </ModalBody>
                 <ModalFooter>
                   <Button color="danger" variant="light" onPress={onClose}>
@@ -115,5 +114,5 @@ export function PlansCards({ plan, message, isMiddleCard }: CardProps) {
         </Modal>
       </CardFooter>
     </Card>
-  )
+  );
 }

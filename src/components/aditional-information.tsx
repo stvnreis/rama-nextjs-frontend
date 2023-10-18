@@ -1,4 +1,4 @@
-import { Card, CardBody } from '@nextui-org/react'
+import { Card, CardBody } from '@nextui-org/react';
 
 export default function AditionalInformation() {
   return (
@@ -13,5 +13,5 @@ export default function AditionalInformation() {
         </p>
       </CardBody>
     </Card>
-  )
+  );
 }

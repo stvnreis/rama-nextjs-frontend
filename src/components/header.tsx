@@ -1,7 +1,5 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { ContactUs } from './contact-us'
 import {
   Image,
   Link,
@@ -12,19 +10,24 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from '@nextui-org/react'
+} from '@nextui-org/react';
+import React from 'react';
+
+import { MenuItems } from '../types/menu-items';
+import { ContactUs } from './contact-us';
+
+const defaultWhatsappMessage =
+  'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.';
+
+const menuItems: MenuItems[] = [
+  {
+    text: 'Home',
+    url: '/',
+  },
+];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-
-  const menuItems = [
-    'Home',
-    'Entrar em contato',
-    // 'Planos',
-    // 'Localização',
-    // 'Nosso Time',
-    // 'Empresas Parceiras',
-  ]
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
     <Navbar
@@ -70,12 +73,30 @@ export function Header() {
       <NavbarMenu className="pt-10 flex flex-col items-end">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" className="w-full" href="#" size="lg">
-              {item}
+            <Link
+              color="foreground"
+              className="w-full"
+              href={item.url}
+              size="lg"
+            >
+              {item.text}
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <Link
+            href={`https://wa.me/18997413773?text=${encodeURI(
+              defaultWhatsappMessage,
+            )}`}
+            target="_blank"
+            color="foreground"
+            size="lg"
+            className="w-full"
+          >
+            Entrar em Contato
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
-  )
+  );
 }

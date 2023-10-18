@@ -6,12 +6,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'drive.google.com',
-        // port: '',
-        // pathname: '',
       },
     ],
     domains: ['drive.google.com'],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,14 +1,13 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { Button } from '@nextui-org/react'
-import { Smartphone } from 'lucide-react'
+import { Button } from '@nextui-org/react';
+import Link from 'next/link';
 
 const message =
-  'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.'
+  'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.';
 
 export interface ContactUsProps {
-  className?: string
+  className?: string;
 }
 
 export function ContactUs({ className }: ContactUsProps) {
@@ -24,10 +23,10 @@ export function ContactUs({ className }: ContactUsProps) {
           radius="full"
           className={`${className ?? 'text-black hidden sm:flex'}`}
         >
-          <Smartphone />
+          {/* <Smartphone /> */}
           <span className="sm:flex sm:text-sm">Entrar em Contato</span>
         </Button>
       </Link>
     </div>
-  )
+  );
 }
