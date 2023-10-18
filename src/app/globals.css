@@ -4,7 +4,7 @@
 
 @layer components {
   .carousel-container {
-    @apply relative mt-10 h-44 w-3/4 sm:h-40 lg:w-3/6 md:h-56 lg:h-80 2xl:h-96;
+    @apply relative mt-10 h-44 w-3/5 sm:h-40 lg:w-3/6 md:h-56 lg:h-80 2xl:h-96;
     perspective: 450px;
     transform-style: preserve-3d;
   }
@@ -44,10 +44,10 @@
   }
 
   .service-card-body {
-    @apply flex flex-col items-center justify-center gap-1;
+    @apply flex flex-col items-center justify-center gap-1 w-full;
   }
   
   .service-card-body-text {
-    @apply text-center text-xs lg:text-lg;
+    @apply text-center text-[8px] md:text-xs lg:text-lg;
   }
 }

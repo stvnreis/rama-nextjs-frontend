@@ -13,8 +13,8 @@ import {
 
 export default function OurServices() {
   return (
-    <div className="flex flex-col justify-center items-center gap-3 mx-10 w-full sm:w-fit">
-      <div className="flex gap-3 w-full">
+    <div className="flex flex-col justify-center items-center gap-3 mx-5 md:mx-10 2xl:mx-0 w-fit">
+      <div className="flex gap-3 w-fit">
         <Card className="service-card">
           <CardBody className="service-card-body">
             <Accessibility size={30} />
