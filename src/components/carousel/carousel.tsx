@@ -39,7 +39,22 @@ export default function Carousel() {
   //   })
   // }
 
-  if (isLoading) return <CircularProgress aria-label="Carregando Imagens" />;
+  if (isLoading)
+    return (
+      <div className="carousel-container">
+        <CarouselItem index={0} activeIndex={0} onChange={() => null}>
+          <CircularProgress
+            aria-label="Carregando Imagens"
+            size="lg"
+            style={{
+              position: 'relative',
+              justifyContent: 'center',
+              justifySelf: 'center',
+            }}
+          />
+        </CarouselItem>
+      </div>
+    );
   if (isError) return <div>Error</div>;
 
   return (
