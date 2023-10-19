@@ -52,7 +52,7 @@
   }
 
   .service-card {
-    @apply hover:-translate-y-4 hover:text-primary hover:border-solid hover:border-2 hover:border-primary w-[170px] h-[170px] md:w-[200px] md:h-[200px];
+    @apply hover:-translate-y-4 hover:text-primary hover:border-solid hover:border-2 hover:border-primary w-[10.6rem] h-[10.6rem] md:w-[12.5rem] md:h-[12.5rem];
   }
 
   .service-card-body {
