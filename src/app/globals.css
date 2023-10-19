@@ -39,15 +39,27 @@
     @apply absolute rotate-180 left-1/2 -bottom-6 flex h-5 w-fit -translate-x-1/2 transform items-center justify-center space-x-1;
   }
 
+  .services-container {
+    @apply flex flex-col justify-center items-center gap-2 md:gap-4 mx-5 md:mx-10 2xl:mx-0 w-full;
+  }
+
+  .services-block {
+    @apply w-full flex flex-col md:flex-row gap-2 justify-center items-center;
+  }
+
+  .services-items-container {
+    @apply flex gap-3 w-fit;
+  }
+
   .service-card {
-    @apply hover:-translate-y-4 hover:text-primary w-1/4;
+    @apply hover:-translate-y-4 hover:text-primary hover:border-solid hover:border-2 hover:border-primary w-[170px] h-[170px] md:w-[200px] md:h-[200px];
   }
 
   .service-card-body {
-    @apply flex flex-col items-center justify-center gap-1 w-full;
+    @apply flex flex-col items-center justify-center gap-1;
   }
   
   .service-card-body-text {
-    @apply text-center text-[8px] md:text-xs lg:text-lg;
+    @apply text-center text-sm lg:text-lg w-fit;
   }
 }

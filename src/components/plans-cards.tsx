@@ -41,7 +41,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
           {money(plan.value)}
           <span className="text-primary">/mês</span>
         </div>
-        <span className="text-sm italic dark:text-zinc-400 text-zinc-600">
+        <span className="text-sm italic dark:text-zinc-400 text-zinc-600 text-left">
           {plan.description}
         </span>
       </CardHeader>
@@ -57,10 +57,10 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
           <ul>
             {plan.list.map((item, index) => {
               return (
-                <li key={index} className="flex flex-col text-xs mt-1">
+                <li key={index} className="flex flex-col text-sm mt-2">
                   <div className="flex justify-start items-center">
                     <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
-                      <CheckCircle2 size={30} />
+                      <CheckCircle2 />
                     </div>
                     <span className="pl-4 dark:text-zinc-400 text-zinc-600">
                       {item}
@@ -85,7 +85,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
         <Modal
           isOpen={isOpen}
           onOpenChange={onOpenChange}
-          scrollBehavior="outside"
+          scrollBehavior="inside"
           size="xl"
           backdrop="blur"
         >

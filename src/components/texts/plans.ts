@@ -11,7 +11,7 @@ export const plans: PlansProps[] = [
   {
     name: 'Básico',
     description: `
-      Escritório Virtual/Endereço Fiscal
+      Escritório Virtual/Endereço Fiscal e Comercial
     `,
     title: '',
     list: [
