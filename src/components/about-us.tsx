@@ -85,9 +85,9 @@ export default function AboutUs() {
           radius="lg"
         />
         <div className="flex flex-col w-full md:w-1/2 items-center justify-center gap-8 md:items-start">
-          <label className="text-2xl md:text-5xl font-semibold">
+          <label className="text-2xl xl:text-5xl font-semibold">
             Muito Prazer, somos o{' '}
-            <span className="text-3xl md:text-6xl">Ramá Business</span>
+            <span className="text-3xl xl:text-6xl">Ramá Business</span>
           </label>
           <div className="flex flex-col gap-4 text-medium text-justify text-zinc-600">
             <p>Somos um espaço com excelente infraestrutura por assinatura.</p>
