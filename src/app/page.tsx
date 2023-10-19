@@ -23,7 +23,7 @@ export default function Home() {
         </p>
         <Carousel />
         <AboutUs />
-        <div className="max-w-xs md:max-w-xl flex items-center justify-center pt-20">
+        <div className="max-w-xs md:max-w-xl flex items-center justify-center pt-10">
           <h2 className="text-md md:text-3xl font-semibold text-center md:w-full">
             O local perfeito para sua empresa você encontra
             <span className="text-primary"> aqui</span>

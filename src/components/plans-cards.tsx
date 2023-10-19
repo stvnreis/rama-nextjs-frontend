@@ -57,10 +57,10 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
           <ul>
             {plan.list.map((item, index) => {
               return (
-                <li key={index} className="flex flex-col text-xs mt-1">
+                <li key={index} className="flex flex-col text-sm mt-1">
                   <div className="flex justify-start items-center">
                     <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
-                      <CheckCircle2 size={30} />
+                      <CheckCircle2 />
                     </div>
                     <span className="pl-4 dark:text-zinc-400 text-zinc-600">
                       {item}
