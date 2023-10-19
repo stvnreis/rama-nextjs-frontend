@@ -38,7 +38,13 @@ export const Footer = () => {
     // </div>
     <div className="flex flex-col md:flex-row gap-10 md:gap-0 bg-zinc-900 items-center justify-center p-10 text-white">
       <div className="text-xs md:w-1/3 md:justify-start">
-        RAMÁ BUSINESS - Todos os direitos reservados.
+        {/* RAMÁ BUSINESS - Todos os direitos reservados. */}
+        <Image
+          src="/logo-redondo-rama.png"
+          alt="logo redondo rama"
+          width={50}
+          height={50}
+        />
       </div>
       <div className="flex md:w-1/3 items-center justify-center text-xs gap-1">
         Copyright

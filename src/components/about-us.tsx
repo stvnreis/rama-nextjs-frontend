@@ -1,5 +1,6 @@
 import { Image } from '@nextui-org/react';
 
+import { Reveal } from './reveal';
 import OurServices from './services/our-services';
 
 import { Building2, MapPinned, Trophy, Video, Wrench } from 'lucide-react';
@@ -77,31 +78,38 @@ export default function AboutUs() {
     // bg-zinc-900 text-zinc-300
     <section className="py-24 md:pt-40 mt-32 md:my-10 px-10 gap-20 md:px-20 w-full justify-center items-center md:justify-between">
       <div className="flex flex-col md:flex-row gap-10">
-        <Image
-          src="/frente-rama-business.jpeg"
-          alt="Frente Ramá Business"
-          width={600}
-          loading="lazy"
-          radius="lg"
-        />
-        <div className="flex flex-col w-full md:w-1/2 items-center justify-center gap-8 md:items-start">
-          <label className="text-2xl xl:text-5xl font-semibold">
-            Muito Prazer, somos o{' '}
-            <span className="text-3xl xl:text-6xl">Ramá Business</span>
-          </label>
-          <div className="flex flex-col gap-4 text-medium text-justify text-zinc-600">
-            <p>Somos um espaço com excelente infraestrutura por assinatura.</p>
-            <p>
-              Permitimos que empreendedores e empresários tenha um endereço
-              comercial e fiscal sem as preocupações de um escritório
-              tradicional.
-            </p>
-            <p>
-              Assinantes RAMÁ Business também podem contratar escritórios, salas
-              de reunião, salas de atendimento e salas clinicas sob demanda
-            </p>
+        <Reveal width="100%">
+          <Image
+            src="/frente-rama-business.jpeg"
+            alt="Frente Ramá Business"
+            width={600}
+            loading="lazy"
+            radius="lg"
+          />
+        </Reveal>
+        <Reveal width="100%">
+          <div className="xl:mt-10 flex flex-col w-full md:w-full items-center justify-center gap-8 md:items-start">
+            <label className="text-2xl xl:text-5xl font-semibold">
+              Muito Prazer, somos o{' '}
+              <span className="text-3xl xl:text-6xl">Ramá Business</span>
+            </label>
+            <div className="flex flex-col gap-4 text-medium text-justify text-zinc-600">
+              <p>
+                Somos um espaço com excelente infraestrutura por assinatura.
+              </p>
+              <p>
+                Permitimos que empreendedores e empresários tenha um endereço
+                comercial e fiscal sem as preocupações de um escritório
+                tradicional.
+              </p>
+              <p>
+                Assinantes RAMÁ Business também podem contratar escritórios,
+                salas de reunião, salas de atendimento e salas clinicas sob
+                demanda
+              </p>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

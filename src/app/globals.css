@@ -40,11 +40,11 @@
   }
 
   .services-container {
-    @apply flex flex-col justify-center items-center gap-2 md:gap-4 mx-5 md:mx-10 2xl:mx-0 w-full;
+    @apply flex flex-col justify-center items-center gap-2 md:gap-3 mx-5 md:mx-10 2xl:mx-0 w-full h-fit py-4;
   }
 
   .services-block {
-    @apply w-full flex flex-col md:flex-row gap-2 justify-center items-center;
+    @apply w-full h-full flex flex-col md:flex-row gap-2 justify-center items-center;
   }
 
   .services-items-container {

@@ -8,6 +8,7 @@ import { PlansCards } from '../components/plans-cards';
 import { Reveal } from '../components/reveal';
 import OurServices from '../components/services/our-services';
 import { plans } from '../components/texts/plans';
+import { Swiper } from '@/components/slider/swiper';
 
 export default function Home() {
   return (
@@ -22,10 +23,9 @@ export default function Home() {
             <Divider className="w-72 md:max-w-lg md:w-96 flex items-center justify-center bg-black" />
           </div>
         </Reveal>
-        <Carousel />
-        <Reveal>
-          <AboutUs />
-        </Reveal>
+        {/* <Carousel /> */}
+        <Swiper />
+        <AboutUs />
         <Reveal>
           <div className="flex flex-col justify-center items-center gap-14">
             <label className="text-lg text-primary opacity-90 text-semibold">
