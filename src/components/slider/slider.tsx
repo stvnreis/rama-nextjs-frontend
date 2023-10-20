@@ -34,7 +34,7 @@ export const Slider = () => {
       pagination={{ clickable: true, type: 'bullets' }}
       loop
       navigation
-      className="w-full h-[43rem] mySwiper"
+      className="w-full h-[37.5rem] mySwiper"
     >
       {data?.files.map((file, index) => {
         return (

@@ -27,23 +27,9 @@ export default function Home() {
         {/* <Carousel /> */}
         <AboutUs />
         {/* <Reveal> */}
-        <div className="flex flex-col justify-center items-center gap-14">
-          <label className="text-lg text-primary opacity-90 text-semibold">
-            Nossas Vantagens
-          </label>
-          <OurServices />
-        </div>
         {/* </Reveal> */}
         {/* <Reveal> */}
-        <div className="mt-10">
-          <label className="text-xl md:text-3xl">
-            Infraestrutura moderna e elegante
-          </label>
-          <p className="text-sm max-w-xs text-zinc-500">
-            Recepção, elevador, salas de reunião, salas de atendimento e sala
-            clínica.
-          </p>
-        </div>
+
         {/* </Reveal> */}
         {/* <Reveal> */}
         <div className="container flex flex-col px-8 xl:flex-row items-center justify-center pt-16 gap-6">
@@ -59,6 +45,21 @@ export default function Home() {
         </div>
         {/* </Reveal> */}
         <AditionalInformation />
+        <div className="flex flex-col items-center justify-center gap-2 mt-10 text-center">
+          <label className="text-xl md:text-3xl">
+            Infraestrutura moderna e elegante
+          </label>
+          <p className="text-sm max-w-xs text-zinc-500">
+            Recepção, elevador, salas de reunião, salas de atendimento e sala
+            clínica.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center items-center gap-14">
+          <label className="text-lg text-primary opacity-90 text-semibold">
+            Nossas Vantagens
+          </label>
+          <OurServices />
+        </div>
       </div>
     </section>
   );
