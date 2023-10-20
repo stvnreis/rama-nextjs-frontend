@@ -24,6 +24,14 @@ const menuItems: MenuItems[] = [
     text: 'Home',
     url: '/',
   },
+  {
+    text: 'Sobre nós',
+    url: '',
+  },
+  {
+    text: 'Planos',
+    url: '',
+  },
 ];
 
 export function Header() {
@@ -33,7 +41,7 @@ export function Header() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="py-3 flex sm:items-center sm:justify-center"
+      className="py-3 px-10 flex sm:items-center sm:justify-center"
     >
       <NavbarContent justify="start">
         <NavbarBrand>
@@ -47,22 +55,20 @@ export function Header() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      {/* <NavbarContent className="hidden sm:flex gap-5" justify="center">
+      <NavbarContent className="hidden sm:flex gap-5" justify="center">
         {menuItems.map((item, index) => (
-          <NavbarItem key={`${item}-${index}`} isActive = {index === 0}>
+          <NavbarItem key={`${item.text} - ${index}`}>
             <Link
-              color= {
-                index === 0 ? "primary" : "foreground"
-              }
-              className="w-full"
-              href="#"
+              color="foreground"
+              className="w-full navbar-link"
+              href={item.url}
               size="lg"
             >
-              {item}
+              {item.text}
             </Link>
           </NavbarItem>
         ))}
-      </NavbarContent> */}
+      </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex">
           <ContactUs />
