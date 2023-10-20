@@ -27,9 +27,9 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
 
   return (
     <Card
-      className={`flex flex-col gap-1 min-w-full h-[350px] xl:min-w-min xl:w-1/2 xl:h-[400px] ${
+      className={`flex flex-col gap-1 min-w-full h-[21rem] xl:min-w-min xl:w-1/2 xl:h-[25rem] ${
         isMiddleCard
-          ? 'border-primary border-solid border-2 w-72 xl:h-[430px]'
+          ? 'border-primary border-solid border-2 w-72 xl:h-[26.8rem]'
           : ''
       }`}
       isHoverable

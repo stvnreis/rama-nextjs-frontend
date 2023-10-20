@@ -5,9 +5,14 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 type RevealProps = {
   children: JSX.Element;
   width?: 'fit-content' | '100%';
+  transformOrigin?: string;
 };
 
-export const Reveal = ({ children, width }: RevealProps) => {
+export const Reveal = ({
+  children,
+  width,
+  transformOrigin = 'auto',
+}: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -27,7 +32,8 @@ export const Reveal = ({ children, width }: RevealProps) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.35, delay: 0.2 }}
+        style={{ transformOrigin }}
       >
         {children}
       </motion.div>

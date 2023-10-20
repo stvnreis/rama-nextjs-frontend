@@ -40,11 +40,11 @@
   }
 
   .services-container {
-    @apply flex flex-col justify-center items-center gap-2 md:gap-4 mx-5 md:mx-10 2xl:mx-0 w-full;
+    @apply flex flex-col justify-center items-center gap-2 md:gap-3 mx-5 md:mx-10 2xl:mx-0 w-full h-fit py-4;
   }
 
   .services-block {
-    @apply w-full flex flex-col md:flex-row gap-2 justify-center items-center;
+    @apply w-full h-full flex flex-col md:flex-row gap-2 justify-center items-center;
   }
 
   .services-items-container {
@@ -52,7 +52,7 @@
   }
 
   .service-card {
-    @apply hover:-translate-y-4 hover:text-primary hover:border-solid hover:border-2 hover:border-primary w-[170px] h-[170px] md:w-[200px] md:h-[200px];
+    @apply hover:-translate-y-4 hover:text-primary hover:border-solid hover:border-2 hover:border-primary w-[10.6rem] h-[10.6rem] md:w-[12.5rem] md:h-[12.5rem];
   }
 
   .service-card-body {

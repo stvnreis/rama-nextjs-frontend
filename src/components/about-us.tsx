@@ -1,6 +1,6 @@
-import { Image } from '@nextui-org/react';
+import Image from 'next/image';
 
-import OurServices from './services/our-services';
+import { Reveal } from './reveal';
 
 import { Building2, MapPinned, Trophy, Video, Wrench } from 'lucide-react';
 
@@ -75,31 +75,48 @@ export default function AboutUs() {
     //   </div>
     // </div>
     // bg-zinc-900 text-zinc-300
-    <section className="py-24 md:pt-40 mt-32 md:my-10 px-10 gap-20 md:px-20 w-full justify-center items-center md:justify-between">
-      <div className="flex flex-col md:flex-row gap-10">
-        <Image
-          src="/frente-rama-business.jpeg"
-          alt="Frente Ramá Business"
-          width={600}
-          loading="lazy"
-          radius="lg"
-        />
-        <div className="flex flex-col w-full md:w-1/2 items-center justify-center gap-8 md:items-start">
-          <label className="text-2xl xl:text-5xl font-semibold">
-            Muito Prazer, somos o{' '}
-            <span className="text-3xl xl:text-6xl">Ramá Business</span>
+    <section className="py-24 px-10 gap-20 md:px-20 w-full justify-center items-center md:justify-between">
+      <div className="flex flex-col xl:flex-row gap-10">
+        <div className="w-full h-96 xl:h-auto xl:w-1/2 xl:px-10 relative">
+          <Image
+            src="/frente-rama-business.jpeg"
+            alt="Frente Ramá Business"
+            fill
+            loading="lazy"
+            style={{
+              objectFit: 'cover',
+              borderRadius: '20px',
+            }}
+          />
+        </div>
+
+        <div className="flex flex-col w-full xl:w-1/2 items-center justify-center gap-3 md:items-start">
+          <label className="text-2xl font-semibold">
+            Edifício comercial <span className="text-3xl">Ramá Business</span>
           </label>
           <div className="flex flex-col gap-4 text-medium text-justify text-zinc-600">
-            <p>Somos um espaço com excelente infraestrutura por assinatura.</p>
             <p>
-              Permitimos que empreendedores e empresários tenha um endereço
-              comercial e fiscal sem as preocupações de um escritório
-              tradicional.
+              Somos um centro de negócios, empreendimento de alto padrão e
+              arquitetura moderna, destinado a locações corporativas, possui
+              elevador online e estacionamento rotativo. Localizado no novo
+              centro comercial na cidade de Birigui-SP, nosso espaço é voltado
+              para o empreendedor arrojado e dinâmico que busca fortalecer e
+              sedimentar sua marca.
             </p>
             <p>
-              Assinantes RAMÁ Business também podem contratar escritórios, salas
-              de reunião, salas de atendimento e salas clinicas sob demanda
+              Assinantes RAMA BUSINESS podem contratar escritórios, salas de
+              reunião, sala rotativa compartilhada, espaço coworking e de
+              eventos corporativos sob demanda. Oferecemos a empresários,
+              representantes comerciais e empreendedores escritório virtual,
+              permitindo que tenham um endereço comercial e fiscal garantindo
+              maior credibilidade ao seu negócio.
             </p>
+            <p>
+              Prezamos pela interação entre pessoas e negócios, por isso
+              buscamos as melhores soluções para você e sua equipe trabalharem,
+              para o seu negócio crescer e para a nossa comunidade se integrar.
+            </p>
+            <p>Aproveite dessa experiência conosco.</p>
           </div>
         </div>
       </div>
