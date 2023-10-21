@@ -12,8 +12,8 @@ import {
   useDisclosure,
 } from '@nextui-org/react';
 
-import { money } from '../utils/format';
-import { PlansProps } from './texts/plans';
+import { money } from '../../utils/format';
+import { PlansProps } from '../texts/plans';
 
 import { CheckCircle2 } from 'lucide-react';
 
@@ -53,24 +53,25 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
         >
           {plan.title}
         </span>
-        <div>
-          <ul>
-            {plan.list.map((item, index) => {
-              return (
-                <li key={index} className="flex flex-col text-sm mt-2">
-                  <div className="flex justify-start items-center">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
-                      <CheckCircle2 />
-                    </div>
-                    <span className="pl-4 dark:text-zinc-400 text-zinc-600">
-                      {item}
-                    </span>
+        <ul>
+          {plan.list.map((item, index) => {
+            return (
+              <li
+                key={`${item} - ${index}`}
+                className="flex flex-col text-sm mt-2"
+              >
+                <div className="flex justify-start items-center">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
+                    <CheckCircle2 />
                   </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                  <span className="pl-4 dark:text-zinc-400 text-zinc-600">
+                    {item}
+                  </span>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </CardBody>
       <CardFooter className="flex items-center justify-center">
         <Button
@@ -97,7 +98,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
                 </ModalHeader>
                 <ModalBody>
                   {plan.text.map((text, index) => (
-                    <p key={index}>{text}</p>
+                    <p key={`${text} - ${index}`}>{text}</p>
                   ))}
                 </ModalBody>
                 <ModalFooter>

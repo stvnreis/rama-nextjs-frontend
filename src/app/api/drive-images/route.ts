@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
     },
   });
 
-  const response = await drive.files.list();
+  const response = await drive.files.list({ orderBy: 'name asc' });
 
   return new NextResponse(JSON.stringify({ files: response.data.files }), {
     headers: {

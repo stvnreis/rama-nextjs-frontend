@@ -3,63 +3,51 @@
 @tailwind utilities;
 
 @layer components {
-  .carousel-container {
-    @apply relative mt-10 h-44 w-3/5 sm:h-40 lg:w-3/6 md:h-56 lg:h-80 2xl:h-96;
-    perspective: 450px;
-    transform-style: preserve-3d;
+  .secondary-text-color {
+    color: #D99C2B;
   }
 
-  .carousel-item {
-    @apply absolute h-full w-full cursor-pointer overflow-hidden
-    rounded-3xl drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-1000 ease-in-out;
+  .navbar-link {    
+    display: inline-block;
+    position: relative;
+    color: #ffbe0b;
   }
 
-  /*.carousel-btn-switch-card {
-    @apply absolute z-40 flex h-9 w-9 
-    cursor-pointer items-center justify-center 
-    rounded-full border-2 border-[#302e30] bg-[#181818] 
-    text-2xl opacity-75 transition duration-1000 hover:opacity-100 md:h-12 md:w-12;
+  .navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffbe0b;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
 
-  .carousel-btn-switch-card-left {
-    @apply right-1/2 top-1/2 translate-x-[-150px] translate-y-[-50%] transform sm:translate-x-[-200px] 
-    md:translate-x-[-300px] lg:translate-x-[-400px] xl:translate-x-[-500px] 2xl:translate-x-[-650px];
+  .navbar-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 
-  .carousel-btn-switch-card-right {
-    @apply top-1/2 left-1/2 translate-x-[150px] translate-y-[-50%] transform sm:translate-x-[200px] 
-    md:translate-x-[300px] lg:translate-x-[400px] xl:translate-x-[500px] 2xl:translate-x-[650px];
-  } */
-  
-  .carousel-indicator-dots {
-    @apply h-2 w-2 rounded-full bg-zinc-500 opacity-50 transition-all duration-500 hover:w-4 hover:opacity-100;
-  }
-  
-  .carousel-indicator-container {
-    @apply absolute rotate-180 left-1/2 -bottom-6 flex h-5 w-fit -translate-x-1/2 transform items-center justify-center space-x-1;
+  .what-we-offer-container {
+    @apply w-full flex flex-col md:flex-row text-center items-start justify-center gap-10 md:gap-3;
   }
 
-  .services-container {
-    @apply flex flex-col justify-center items-center gap-2 md:gap-3 mx-5 md:mx-10 2xl:mx-0 w-full h-fit py-4;
+  .what-we-offer {
+    @apply flex flex-col gap-10 w-full justify-center items-center;
   }
 
-  .services-block {
-    @apply w-full h-full flex flex-col md:flex-row gap-2 justify-center items-center;
+  .what-we-offer-item-container {
+    @apply flex h-[7rem] flex-col gap-3 items-center;
   }
 
-  .services-items-container {
-    @apply flex gap-3 w-fit;
+  .what-we-offer-item {
+    @apply flex items-center justify-center gap-2;
   }
 
-  .service-card {
-    @apply hover:-translate-y-4 hover:text-primary hover:border-solid hover:border-2 hover:border-primary w-[10.6rem] h-[10.6rem] md:w-[12.5rem] md:h-[12.5rem];
-  }
-
-  .service-card-body {
-    @apply flex flex-col items-center justify-center gap-1;
-  }
-  
-  .service-card-body-text {
-    @apply text-center text-sm lg:text-lg w-fit;
+  .what-we-offer-item-text {
+    @apply text-sm;
   }
 }
