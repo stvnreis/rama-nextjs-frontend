@@ -50,4 +50,8 @@
   .what-we-offer-item-text {
     @apply text-sm;
   }
+
+  .where-to-find-us-container {
+    @apply flex flex-col items-center justify-center;
+  }
 }

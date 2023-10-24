@@ -20,17 +20,6 @@ export default function Home() {
       <Reveal width="100%">
         <PlansContainer />
       </Reveal>
-      <GaleryContainer />
     </section>
   );
 }
-
-// <div className="flex flex-col items-center justify-center gap-2 mt-10 text-center">
-//   <label className="text-xl md:text-3xl">
-//     Infraestrutura moderna e elegante
-//   </label>
-//   <p className="text-sm max-w-xs text-zinc-500">
-//     Recepção, elevador, salas de reunião, salas de atendimento e sala
-//     clínica.
-//   </p>
-// </div>
