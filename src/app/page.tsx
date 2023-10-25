@@ -1,7 +1,6 @@
 'use client';
 
 import AboutUs from '../components/about-us/about-us';
-import { GaleryContainer } from '@/components/galery/galery-container';
 import { PlansContainer } from '@/components/plans/plans-container';
 import { Reveal } from '@/components/reveal';
 import { Slider } from '@/components/slider/slider';
