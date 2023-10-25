@@ -36,11 +36,11 @@
   }
 
   .what-we-offer {
-    @apply flex flex-col gap-10 w-full justify-center items-center;
+    @apply flex flex-col gap-16 w-full justify-center items-center;
   }
 
   .what-we-offer-item-container {
-    @apply flex h-[7rem] flex-col gap-3 items-center;
+    @apply flex h-[7rem] flex-col gap-2 items-center;
   }
 
   .what-we-offer-item {

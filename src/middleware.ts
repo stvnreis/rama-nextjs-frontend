@@ -19,11 +19,6 @@ export function middleware(req: Request) {
       },
     });
 
-  console.log('Middleware!');
-
-  console.log(req.method);
-  console.log(req.url);
-
   return NextResponse.next();
 }
 
