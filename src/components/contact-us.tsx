@@ -20,7 +20,7 @@ export function ContactUs({ className }: ContactUsProps) {
         <Button
           color="primary"
           variant="solid"
-          radius="full"
+          radius="md"
           className={`${className ?? 'text-black hidden sm:flex'}`}
         >
           {/* <Smartphone /> */}

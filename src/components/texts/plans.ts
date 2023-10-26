@@ -11,7 +11,7 @@ export const plans: PlansProps[] = [
   {
     name: 'Básico',
     description: `
-      Escritório Virtual/Endereço Fiscal
+      Escritório Virtual/Endereço Fiscal e Comercial
     `,
     title: '',
     list: [
@@ -33,12 +33,13 @@ export const plans: PlansProps[] = [
   {
     name: 'Essencial',
     description: `
-      cadeira exclusiva em ambiente compartilhado 4 horas diárias
+      cadeira exclusiva em ambiente compartilhado
     `,
     title: 'Incluso:',
     list: [
       'Segunda a Sexta das 07:30 as 11:30 ou 11:30 as 15:30 exceto feriados',
       'Wi-fi disponivel sem custo adicional',
+      'Direito à 4 horas de uso diárias',
     ],
     value: 300,
     text: [
@@ -53,13 +54,14 @@ export const plans: PlansProps[] = [
   {
     name: 'Executivo',
     description: `
-      cadeira exclusiva em ambiente compartilhado 8 horas diárias
+      cadeira exclusiva em ambiente compartilhado
     `,
     title: 'Incluso:',
     list: [
       'Segunda a sexta das 07:30 as 17:30',
       'Sábado as 09:00 as 12h',
       'Wi-fi disponivel sem custo adicional',
+      'Direito à 8 horas de uso diárias',
     ],
     value: 500,
     text: [

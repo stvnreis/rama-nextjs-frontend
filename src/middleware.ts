@@ -1,14 +1,11 @@
 import { NextResponse } from 'next/server';
 
-// const allowedOrigins =
-//   process.env.NODE_ENV === 'production'
-//     ? ['https://ramabusiness.com.br', 'https://www.ramabusiness.com.br']
-//     : [
-//         'https://rama-nextjs-frontend-git-develop-stvnreis.vercel.app/',
-//         // 'http://localhost:3000',
-//       ];
-
-const allowedOrigins = [''];
+const allowedOrigins = [
+  'https://ramabusiness.com.br',
+  'https://www.ramabusiness.com.br',
+  'https://rama-nextjs-frontend-git-develop-stvnreis.vercel.app/',
+  'http://localhost:3000',
+];
 
 export function middleware(req: Request) {
   const origin = req.headers.get('origin');
@@ -21,11 +18,6 @@ export function middleware(req: Request) {
         'Content-Type': 'text/plain',
       },
     });
-
-  console.log('Middleware!');
-
-  console.log(req.method);
-  console.log(req.url);
 
   return NextResponse.next();
 }

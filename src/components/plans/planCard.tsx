@@ -12,8 +12,8 @@ import {
   useDisclosure,
 } from '@nextui-org/react';
 
-import { money } from '../utils/format';
-import { PlansProps } from './texts/plans';
+import { money } from '../../utils/format';
+import { PlansProps } from '../texts/plans';
 
 import { CheckCircle2 } from 'lucide-react';
 
@@ -22,14 +22,14 @@ export interface CardProps {
   plan: PlansProps;
 }
 
-export function PlansCards({ plan, isMiddleCard }: CardProps) {
+export function PlanCards({ plan, isMiddleCard }: CardProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <Card
-      className={`flex flex-col gap-1 min-w-full h-[350px] xl:min-w-min xl:w-1/2 xl:h-[400px] ${
+      className={`flex flex-col gap-1 min-w-full h-[23rem] md:min-w-min md:w-1/2 md:h-[25.5rem] ${
         isMiddleCard
-          ? 'border-primary border-solid border-2 w-72 xl:h-[430px]'
+          ? 'border-primary border-solid border-2 w-72 md:h-[26.5rem]'
           : ''
       }`}
       isHoverable
@@ -41,7 +41,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
           {money(plan.value)}
           <span className="text-primary">/mês</span>
         </div>
-        <span className="text-sm italic dark:text-zinc-400 text-zinc-600">
+        <span className="text-sm italic dark:text-zinc-400 text-zinc-600 text-left">
           {plan.description}
         </span>
       </CardHeader>
@@ -53,24 +53,25 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
         >
           {plan.title}
         </span>
-        <div>
-          <ul>
-            {plan.list.map((item, index) => {
-              return (
-                <li key={index} className="flex flex-col text-xs mt-1">
-                  <div className="flex justify-start items-center">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
-                      <CheckCircle2 size={30} />
-                    </div>
-                    <span className="pl-4 dark:text-zinc-400 text-zinc-600">
-                      {item}
-                    </span>
+        <ul>
+          {plan.list.map((item, index) => {
+            return (
+              <li
+                key={`${item} - ${index}`}
+                className="flex flex-col text-xs lg:text-sm mt-2"
+              >
+                <div className="flex justify-start items-center">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">
+                    <CheckCircle2 />
                   </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                  <span className="pl-4 dark:text-zinc-400 text-zinc-600">
+                    {item}
+                  </span>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </CardBody>
       <CardFooter className="flex items-center justify-center">
         <Button
@@ -85,7 +86,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
         <Modal
           isOpen={isOpen}
           onOpenChange={onOpenChange}
-          scrollBehavior="outside"
+          scrollBehavior="inside"
           size="xl"
           backdrop="blur"
         >
@@ -97,7 +98,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
                 </ModalHeader>
                 <ModalBody>
                   {plan.text.map((text, index) => (
-                    <p key={index}>{text}</p>
+                    <p key={`${text} - ${index}`}>{text}</p>
                   ))}
                 </ModalBody>
                 <ModalFooter>
