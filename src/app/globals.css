@@ -52,6 +52,6 @@
   }
 
   .where-to-find-us-container {
-    @apply flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center mt-14 gap-14;
   }
 }

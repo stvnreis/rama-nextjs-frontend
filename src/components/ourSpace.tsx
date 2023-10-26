@@ -66,14 +66,18 @@ export const OurSpace = () => {
               <Accessibility size={40} />
               Acessibilidade
             </div>
-            <span className="what-we-offer-item-text"></span>
+            <span className="what-we-offer-item-text">
+              Rampa de acesso ao prédio, elevador e banheiros adaptados
+            </span>
           </div>
           <div className="what-we-offer-item-container">
             <div className="what-we-offer-item">
               <Wifi size={40} />
               Wifi gratuito
             </div>
-            <span className="what-we-offer-item-text"></span>
+            <span className="what-we-offer-item-text">
+              Acesso gratuito em todos os pavimentos, wi-fi de alta qualidade
+            </span>
           </div>
         </div>
 
@@ -83,14 +87,21 @@ export const OurSpace = () => {
               <Armchair size={40} />
               Recepção compartilhada
             </div>
-            <span className="what-we-offer-item-text"></span>
+            <span className="what-we-offer-item-text">
+              Ambiente agradável, decorado com poltronas modernas e
+              confortáveis, vista privilegiada da cidade. Agua mineral
+              disponível.
+            </span>
           </div>
           <div className="what-we-offer-item-container">
             <div className="what-we-offer-item">
               <CarFront size={40} />
               Estacionameto Rotativo
             </div>
-            <span className="what-we-offer-item-text"></span>
+            <span className="what-we-offer-item-text">
+              Estacionamento rotativo próprio, garante acesso ao local e maior
+              segurança para seu veículo.
+            </span>
           </div>
         </div>
       </div>

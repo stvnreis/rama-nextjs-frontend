@@ -19,24 +19,6 @@
   background-color: #ffbe0b;
 }
 
-.swiper-button-prev {
-  color: black;
-  opacity: 0.6;
-}
-
-.swiper-button-prev:hover {
-  opacity: 1;
-}
-
-.swiper-button-next {
-  color: black;
-  opacity: 0.6;
-}
-
-.swiper-button-next:hover {
-  opacity: 1;
-}
-
 .slider-image {
   opacity: 0.9;
 }

@@ -103,7 +103,7 @@ export const Slider = () => {
       slidesPerView={1}
       pagination={{ clickable: true, type: 'bullets' }}
       navigation
-      className="w-full h-[33rem]"
+      className="w-full h-[33rem] cursor-grab"
     >
       {data?.files.map((file, index) => {
         return (
