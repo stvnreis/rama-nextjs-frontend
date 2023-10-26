@@ -3,6 +3,7 @@ import 'swiper/css/pagination';
 import './slider.css';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { ReactNode } from 'react';
 
 import { Pagination } from 'swiper/modules';
@@ -41,23 +42,56 @@ export const Slider = () => {
         A partir de <span className="font-bold">{money(80)}</span> /mês
       </span>
     </>,
-    <></>,
-    <></>,
-    <></>,
+    <>
+      <h2 className="secondary-text-color font-black text-lg md:text-3xl">
+        AMBIENTE PARA MEDIAÇÃO E CONCILIAÇÃO
+      </h2>
+      <span className="text-medium md:text-lg font-normal text-center w-[25rem] md:w-[45rem]">
+        Ambiente moderno, capaz de despertar sensação de acolhimento, aconchego
+        e bem estar
+      </span>
+    </>,
+    <>
+      <h2 className="secondary-text-color font-black text-lg md:text-3xl">
+        RECEPÇÃO MOBILIADA
+      </h2>
+      <span className="text-medium md:text-lg font-normal text-center w-[25rem] md:w-[45rem]">
+        Mini recepção localizada no segundo pavimento para uso de assinantes das
+        salas corporativas
+      </span>
+    </>,
+    <>
+      <h2 className="secondary-text-color font-black text-lg md:text-3xl">
+        SALA COMPARTILHADA
+      </h2>
+      <span className="text-medium md:text-lg font-normal text-center w-[25rem] md:w-[45rem]">
+        Sala para atendimento compartilhado, comporta até 05 pessoas. Ambiente
+        climatizado, moderno e arrojado
+      </span>
+      <span className="text-zinc-100 text-medium md:text-3xl">
+        A partir de <span className="font-bold">{money(25)}</span> /hora
+      </span>
+    </>,
     <>
       <h2 className="secondary-text-color font-black">
         SIGA NOSSAS REDES SOCIAIS
       </h2>
       <p className="text-medium">e fique por dentro de todas as novidades</p>
-      <ul className="flex gap-5 opacity-70">
+      <ul className="flex gap-4 opacity-70">
         <li>
-          <Instagram />
+          <Link href="/" target="_blank">
+            <Instagram />
+          </Link>
         </li>
         <li>
-          <Linkedin />
+          <Link href="/" target="_blank">
+            <Linkedin />
+          </Link>
         </li>
         <li>
-          <Facebook />
+          <Link href="/" target="_blank">
+            <Facebook />
+          </Link>
         </li>
       </ul>
     </>,
@@ -72,7 +106,6 @@ export const Slider = () => {
       className="w-full h-[33rem]"
     >
       {data?.files.map((file, index) => {
-        console.log(`https://drive.google.com/uc?export=view&id=${file.id}`);
         return (
           <div key={`${index} - ${index}`}>
             <SwiperSlide>

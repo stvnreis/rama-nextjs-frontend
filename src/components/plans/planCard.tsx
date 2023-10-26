@@ -22,14 +22,14 @@ export interface CardProps {
   plan: PlansProps;
 }
 
-export function PlansCards({ plan, isMiddleCard }: CardProps) {
+export function PlanCards({ plan, isMiddleCard }: CardProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <Card
-      className={`flex flex-col gap-1 min-w-full h-[21rem] xl:min-w-min xl:w-1/2 xl:h-[25rem] ${
+      className={`flex flex-col gap-1 min-w-full h-[23rem] md:min-w-min md:w-1/2 md:h-[25.5rem] ${
         isMiddleCard
-          ? 'border-primary border-solid border-2 w-72 xl:h-[26.8rem]'
+          ? 'border-primary border-solid border-2 w-72 md:h-[26.5rem]'
           : ''
       }`}
       isHoverable
@@ -58,7 +58,7 @@ export function PlansCards({ plan, isMiddleCard }: CardProps) {
             return (
               <li
                 key={`${item} - ${index}`}
-                className="flex flex-col text-sm mt-2"
+                className="flex flex-col text-xs lg:text-sm mt-2"
               >
                 <div className="flex justify-start items-center">
                   <div className="w-3 h-3 sm:w-4 sm:h-4 flex items-center">

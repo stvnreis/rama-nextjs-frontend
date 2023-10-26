@@ -9,11 +9,11 @@ import {
   CarFront,
 } from 'lucide-react';
 
-export const WhatWeOffer = () => {
+export const OurSpace = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 px-20">
-      <label className="text-primary text-lg font-semibold">
-        Nossos Serviços
+    <div className="flex flex-col items-center justify-center gap-14 px-20">
+      <label className="text-primary text-2xl font-semibold">
+        Porque vir para o nosso espaço?
       </label>
 
       <div className="what-we-offer-container">

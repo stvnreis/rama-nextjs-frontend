@@ -55,20 +55,23 @@ export function Header() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-5" justify="center">
+      {/* <NavbarContent className="hidden sm:flex gap-5" justify="center">
         {menuItems.map((item, index) => (
-          <NavbarItem key={`${item.text} - ${index}`}>
-            <Link
+          <NavbarItem
+            key={`${item.text} - ${index}`}
+            className="cursor-pointer text-foreground navbar-link"
+          >
+            {/* <Link
               color="foreground"
               className="w-full navbar-link"
               href={item.url}
               size="lg"
-            >
-              {item.text}
-            </Link>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
+            > */}
+      {/* {item.text} */}
+      {/* </Link> */}
+      {/* </NavbarItem> */}
+      {/* )) */}
+      {/* </NavbarContent> */}
       <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex">
           <ContactUs />
@@ -78,7 +81,7 @@ export function Header() {
         aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         className="sm:hidden"
       />
-      <NavbarMenu className="pt-10 flex flex-col items-end">
+      <NavbarMenu className="pt-10 flex flex-col items-start">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link

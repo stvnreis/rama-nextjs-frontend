@@ -1,10 +1,10 @@
 'use client';
 
 import AboutUs from '../components/about-us/about-us';
-import { PlansContainer } from '@/components/plans/plans-container';
+import { OurSpace } from '@/components/ourSpace';
+import { PlansContainer } from '@/components/plans/plansContainer';
 import { Reveal } from '@/components/reveal';
 import { Slider } from '@/components/slider/slider';
-import { WhatWeOffer } from '@/components/what-we-offer';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <AboutUs />
       </Reveal>
       <Reveal width="100%">
-        <WhatWeOffer />
+        <OurSpace />
       </Reveal>
       <Reveal width="100%">
         <PlansContainer />
