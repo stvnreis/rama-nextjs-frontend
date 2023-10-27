@@ -3,7 +3,13 @@ import { Map } from './map';
 export const WhereToFindUs = () => {
   return (
     <div className="where-to-find-us-container">
-      <h2 className="text-2xl font-semibold">Venha nos visitar!</h2>
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="section-title font-semibold">Venha nos visitar!</h2>
+        <p>
+          Não deixe para depois, marque um horário e venha conhecer nossas
+          instalações
+        </p>
+      </div>
       <div className="w-full h-96 flex flex-col lg:flex-row px-10 md:px-20 gap-5">
         {/* <div className="w-full flex justify-start items-start">
           <span className="text-justify">

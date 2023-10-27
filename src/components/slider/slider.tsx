@@ -79,17 +79,17 @@ export const Slider = () => {
       <p className="text-medium">e fique por dentro de todas as novidades</p>
       <ul className="flex gap-4 opacity-70">
         <li>
-          <Link href="/" target="_blank">
+          <Link href="/" target="_blank" className="hover:text-primary">
             <Instagram />
           </Link>
         </li>
         <li>
-          <Link href="/" target="_blank">
+          <Link href="/" target="_blank" className="hover:text-primary">
             <Linkedin />
           </Link>
         </li>
         <li>
-          <Link href="/" target="_blank">
+          <Link href="/" target="_blank" className="hover:text-primary">
             <Facebook />
           </Link>
         </li>
@@ -103,7 +103,7 @@ export const Slider = () => {
       slidesPerView={1}
       pagination={{ clickable: true, type: 'bullets' }}
       navigation
-      className="w-full h-[33rem] cursor-grab"
+      className="w-full h-[34.5rem] cursor-grab"
     >
       {data?.files.map((file, index) => {
         return (
@@ -120,7 +120,7 @@ export const Slider = () => {
                 }}
               />
               <div className="absolute bg-black bg-opacity-70 text-zinc-300 w-full h-full">
-                <div className="px-5 md:px-0 flex flex-col items-center text-center text-3xl gap-7 mt-[20%] md:mt-[10%]">
+                <div className="px-5 md:px-0 w-full h-full flex flex-col justify-center items-center text-center text-3xl gap-7">
                   {slideText[index]}
                 </div>
               </div>
@@ -131,9 +131,3 @@ export const Slider = () => {
     </Swiper>
   );
 };
-
-// https://drive.google.com/uc?export=view&id=1mqluxl7HgaFdFQkvi0c5gViZvUHvb1Uh
-// https://drive.google.com/uc?export=view&id=1emD08Y28WHJfh9h7d6XjuDG8bXQ5Wr1q
-// https://drive.google.com/uc?export=view&id=1wIkX_5BwIQ0DZS6-gnvUlj46XkQtQxxm
-// https://drive.google.com/uc?export=view&id=1Owt8TeGtF7OJP1RlRndrF4UAENARS6ou
-// https://drive.google.com/uc?export=view&id=1VmNkU4iRbiENDI9_mAW7gFxa2xolxwxQ
