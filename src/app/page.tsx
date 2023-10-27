@@ -21,7 +21,9 @@ export default function Home() {
       <Reveal width="100%">
         <PlansContainer />
       </Reveal>
-      <OurClientsContainer />
+      <Reveal width="100%">
+        <OurClientsContainer />
+      </Reveal>
       <WhereToFindUs />
     </section>
   );

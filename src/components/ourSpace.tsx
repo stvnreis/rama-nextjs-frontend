@@ -11,8 +11,8 @@ import {
 
 export const OurSpace = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-14 px-20">
-      <label className="text-primary text-2xl font-semibold">
+    <div className="flex flex-col items-center justify-center gap-20 px-20 mt-10">
+      <label className="text-primary section-title font-semibold">
         Porque vir para o nosso espaço?
       </label>
 
@@ -21,7 +21,7 @@ export const OurSpace = () => {
           <div className="what-we-offer-item-container">
             <div className="flex items-center gap-2">
               <MapPinned size={40} />
-              Localizacao
+              Localização
             </div>
             <span className="what-we-offer-item-text">
               Localização privilegiada no novo centro comercial da cidade.
@@ -42,7 +42,7 @@ export const OurSpace = () => {
           <div className="what-we-offer-item-container">
             <div className="what-we-offer-item">
               <Building2 size={40} />
-              Alto padrao
+              Alto padrão
             </div>
             <span className="what-we-offer-item-text">
               Fachada moderna e arrojada, portaria eletrônica, ambiente em

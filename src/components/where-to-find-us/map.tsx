@@ -11,7 +11,7 @@ export const Map = () => {
 
       const loader = new Loader({
         apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY as string,
-        version: 'dayly',
+        version: 'weekly',
         region: 'BR',
         language: 'pt-br',
       });
@@ -23,8 +23,8 @@ export const Map = () => {
       )) as google.maps.MarkerLibrary;
 
       const position = {
-        lat: -21.282465379446943,
-        lng: -50.32671077546191,
+        lat: -21.28246980616398,
+        lng: -50.32672004996667,
       };
 
       const mapOptions: google.maps.MapOptions = {
@@ -44,5 +44,5 @@ export const Map = () => {
     initMap();
   }, []);
 
-  return <div className="h-full w-full rounded-lg" ref={mapRef}></div>;
+  return <div className="h-full w-full" ref={mapRef}></div>;
 };
