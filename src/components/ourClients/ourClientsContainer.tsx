@@ -1,0 +1,38 @@
+import { OurClientsCard } from './ourClientsCard';
+
+export const OurClientsContainer = () => {
+  return (
+    <div className="flex flex-col items-center justify-center gap-24 py-10">
+      <label className="section-title">
+        Conheça as empresas presentes em nosso espaço
+      </label>
+      <div className="flex gap-4">
+        <OurClientsCard
+          imageUrl="/logojup.png"
+          imageAlt="Logo JottaUp"
+          redirectUrl="https://jottaup.com.br/"
+        >
+          JottaUp <br />
+          Digital Marketing
+        </OurClientsCard>
+        <OurClientsCard
+          imageUrl="/logo-fr-studio.png"
+          imageAlt="Logo Fernando Reis Studio Tattoo"
+          redirectUrl="#"
+        >
+          Fernando Reis <br />
+          Studio Tattoo
+        </OurClientsCard>
+        <OurClientsCard
+          imageUrl="/ar3.png"
+          imageAlt="Logo AR3 Advocacia"
+          redirectUrl="#"
+        >
+          AR3 Advocacia
+          <br />
+          Assessoria e consultoria jurídica
+        </OurClientsCard>
+      </div>
+    </div>
+  );
+};

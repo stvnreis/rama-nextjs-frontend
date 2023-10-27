@@ -1,6 +1,8 @@
 'use client';
 
 import AboutUs from '../components/about-us/about-us';
+import { OurClientsContainer } from '../components/ourClients/ourClientsContainer';
+import { WhereToFindUs } from '../components/where-to-find-us/where-to-find-us';
 import { OurSpace } from '@/components/ourSpace';
 import { PlansContainer } from '@/components/plans/plansContainer';
 import { Reveal } from '@/components/reveal';
@@ -19,6 +21,10 @@ export default function Home() {
       <Reveal width="100%">
         <PlansContainer />
       </Reveal>
+      <Reveal width="100%">
+        <OurClientsContainer />
+      </Reveal>
+      <WhereToFindUs />
     </section>
   );
 }
