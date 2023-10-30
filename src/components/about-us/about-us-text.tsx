@@ -11,7 +11,7 @@ export const AboutUsText = () => {
           espaço para eventos e estacionamento rotativo próprio.
         </p>
         <p>
-          Assinantes RAMA BUSINESS podem contratar escritórios, salas de
+          Assinantes RAMÁ BUSINESS podem contratar escritórios, salas de
           reunião, sala rotativa compartilhada, espaço coworking e de eventos
           corporativos sob demanda. Oferecemos a empresários, representantes
           comerciais e empreendedores escritório virtual, permitindo que tenham
