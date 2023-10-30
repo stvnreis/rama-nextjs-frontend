@@ -6,7 +6,7 @@ export const OurClientsContainer = () => {
       <label className="section-title">
         Conheça as empresas presentes em nosso espaço
       </label>
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         <OurClientsCard
           imageUrl="/logojup.png"
           imageAlt="Logo JottaUp"
@@ -28,9 +28,9 @@ export const OurClientsContainer = () => {
           imageAlt="Logo AR3 Advocacia"
           redirectUrl="#"
         >
-          AR3 Advocacia
+          AR3
           <br />
-          Assessoria e consultoria jurídica
+          Assessoria e Consultoria Jurídica
         </OurClientsCard>
       </div>
     </div>

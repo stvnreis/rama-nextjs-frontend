@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Copyright, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Copyright, Facebook, Instagram } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -34,15 +34,18 @@ export const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link href="" target="_blank">
+            <Link
+              href="https://www.instagram.com/ramaa.business/"
+              target="_blank"
+            >
               <Instagram />
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="" target="_blank">
               <Linkedin />
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
