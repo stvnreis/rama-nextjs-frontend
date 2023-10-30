@@ -13,7 +13,7 @@ export const OurSpace = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-20 px-20 mt-10">
       <label className="text-primary section-title font-semibold">
-        Porque vir para o nosso espaço?
+        Por que vir para o nosso espaço?
       </label>
 
       <div className="what-we-offer-container">
@@ -46,7 +46,7 @@ export const OurSpace = () => {
             </div>
             <span className="what-we-offer-item-text">
               Fachada moderna e arrojada, portaria eletrônica, ambiente em
-              porcelanato, ar condicionado e elevador on-line
+              porcelanato, ar condicionado e elevador on-line.
             </span>
           </div>
           <div className="what-we-offer-item-container">
@@ -67,7 +67,7 @@ export const OurSpace = () => {
               Acessibilidade
             </div>
             <span className="what-we-offer-item-text">
-              Rampa de acesso ao prédio, elevador e banheiros adaptados
+              Rampa de acesso ao prédio, elevador e banheiros adaptados.
             </span>
           </div>
           <div className="what-we-offer-item-container">
@@ -76,7 +76,7 @@ export const OurSpace = () => {
               Wifi gratuito
             </div>
             <span className="what-we-offer-item-text">
-              Acesso gratuito em todos os pavimentos, wi-fi de alta qualidade
+              Acesso gratuito em todos os pavimentos, wi-fi de alta qualidade.
             </span>
           </div>
         </div>

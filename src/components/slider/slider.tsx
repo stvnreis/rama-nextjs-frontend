@@ -1,12 +1,13 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import './slider.css';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
 
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 
 import { DriveFile } from '@/types/drive-files';
 import { money } from '@/utils/format';
@@ -119,7 +120,7 @@ export const Slider = () => {
 
   return (
     <Swiper
-      modules={[Pagination]}
+      modules={[Pagination, Navigation, A11y]}
       slidesPerView={1}
       pagination={{ clickable: true, type: 'bullets', dynamicBullets: true }}
       navigation
