@@ -12,7 +12,7 @@ import { DriveFile } from '@/types/drive-files';
 import { money } from '@/utils/format';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 type Data = {
@@ -73,23 +73,43 @@ export const Slider = () => {
       </span>
     </>,
     <>
+      <h2 className="secondary-text-color font-black text-lg md:text-3xl">
+        AMBIENTE PARA EVENTOS
+      </h2>
+      <span className="text-medium md:text-lg font-normal text-center w-[25rem] md:w-[45rem]">
+        Locação para eventos corporativos, palestras, workshops e
+        confraternizações de até 70 pessoas
+      </span>
+      <span className="text-zinc-100 text-medium md:text-3xl">
+        A partir de <span className="font-bold">{money(150)}</span> /hora
+      </span>
+    </>,
+    <>
       <h2 className="secondary-text-color font-black">
         SIGA NOSSAS REDES SOCIAIS
       </h2>
       <p className="text-medium">e fique por dentro de todas as novidades</p>
       <ul className="flex gap-4 opacity-70">
         <li>
-          <Link href="/" target="_blank" className="hover:text-primary">
+          <Link
+            href="https://www.instagram.com/ramaa.business/"
+            target="_blank"
+            className="hover:text-primary"
+          >
             <Instagram />
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/" target="_blank" className="hover:text-primary">
             <Linkedin />
           </Link>
-        </li>
+        </li> */}
         <li>
-          <Link href="/" target="_blank" className="hover:text-primary">
+          <Link
+            href="https://www.facebook.com/ramaa.business?mibextid=ZbWKwL"
+            target="_blank"
+            className="hover:text-primary"
+          >
             <Facebook />
           </Link>
         </li>
@@ -101,9 +121,10 @@ export const Slider = () => {
     <Swiper
       modules={[Pagination]}
       slidesPerView={1}
-      pagination={{ clickable: true, type: 'bullets' }}
+      pagination={{ clickable: true, type: 'bullets', dynamicBullets: true }}
       navigation
-      className="w-full h-[34.5rem] cursor-grab"
+      grabCursor
+      className="w-full h-[34.5rem]"
     >
       {data?.files.map((file, index) => {
         return (

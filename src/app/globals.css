@@ -52,7 +52,7 @@
   }
 
   .where-to-find-us-container {
-    @apply flex flex-col items-center justify-center mt-14 gap-14;
+    @apply flex flex-col items-center justify-center mt-16 gap-14;
   }
 
   .section-title {

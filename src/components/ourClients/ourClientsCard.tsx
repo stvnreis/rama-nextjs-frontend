@@ -26,7 +26,7 @@ export const OurClientsCard = ({
             style={{ objectFit: 'cover' }}
           />
         </CardBody>
-        <CardFooter className="flex items-center justify-center text-center">
+        <CardFooter className="flex items-center justify-center text-center font-semibold">
           {children}
         </CardFooter>
       </Card>
