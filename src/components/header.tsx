@@ -24,14 +24,14 @@ const menuItems: MenuItems[] = [
     text: 'Home',
     url: '/',
   },
-  {
-    text: 'Sobre nós',
-    url: '',
-  },
-  {
-    text: 'Planos',
-    url: '',
-  },
+  // {
+  //   text: 'Sobre nós',
+  //   url: '',
+  // },
+  // {
+  //   text: 'Planos',
+  //   url: '',
+  // },
 ];
 
 export function Header() {

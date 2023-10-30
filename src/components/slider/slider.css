@@ -21,6 +21,14 @@
   background-color: #ffbe0b;
 }
 
+.swiper-button-next {
+  @apply text-black opacity-60 hover:text-primary hover:opacity-80;
+}
+
+.swiper-button-prev {
+  @apply text-black opacity-60 hover:text-primary hover:opacity-80;
+}
+
 .slider-image {
   opacity: 0.9;
 }

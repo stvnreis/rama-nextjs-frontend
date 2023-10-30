@@ -20,7 +20,7 @@ export const plans: PlansProps[] = [
     ],
     value: 80,
     text: [
-      'Oferecemos endereço de credibilidade para ESCRITORIO VIRTUAL/ENDEREÇO FISCAL E COMERCIAL para quem não pretende utilizar fisicamente nossa estrutura, mas precisa de um endereço fiscal a fim de registrar sua razão social, dados do cartao de visita, redes sociais e endereço para correspondência',
+      'Oferecemos endereço de credibilidade para ESCRITORIO VIRTUAL/ENDEREÇO FISCAL E COMERCIAL para quem não pretende utilizar fisicamente nossa estrutura, mas precisa de um endereço fiscal a fim de registrar sua razão social, dados do cartão de visita, redes sociais e endereço para correspondência',
       'Muito utilizado por representantes comerciais ou por matrizes de empresas que precisam de um endereço em suas filiais.',
       'Serviços adicionais como recados, recebimento de correspondencias e encomendas – valores a conferir; pacotes e valores diferenciados para locação de sala rotativa por hora para os contratantes do plano básico',
       'Oferecemos sala mobiliada e decorada em ambiente climatizado. Wi-fi disponivel sem custo adicional, sala com acesso a  portaria eletrônica, comporta ate 05 pessoas',
@@ -33,7 +33,7 @@ export const plans: PlansProps[] = [
   {
     name: 'Essencial',
     description: `
-      cadeira exclusiva em ambiente compartilhado
+      mesa exclusiva em ambiente compartilhado
     `,
     title: 'Incluso:',
     list: [
@@ -43,18 +43,18 @@ export const plans: PlansProps[] = [
     ],
     value: 300,
     text: [
-      'CADEIRA EXCLUSIVA EM AMBIENTE COMPARTILHADO / 4hs diárias',
-      'Você pode utiliza-la de segunda a sexta-feira, das 07:30 as 11:30 ou das 11:30 as 15:30',
+      'MESA EXCLUSIVA EM AMBIENTE COMPARTILHADO / 4hs diárias',
+      'Você pode utilizá-la de segunda a sexta-feira, das 07:30 as 11:30 ou das 11:30 as 15:30',
       'Exceto feriados. Disponilbilizamos   Wi-fi sem custo adicional e agua mineral',
       'ESSENCIAL+',
-      'CADEIRA EXCLUSIVA EM AMBIENTE COMPARTILHADO  4h/diárias',
-      'Você pode utiliza-la de segunda a sexta-feira, das 15:30 as 19:30 ou das 19:30 as 22:30 Ao sabados das 9hs às 13hs. Exceto feriados. Wi-fi disponivel sem custo adicional',
+      'MESA EXCLUSIVA EM AMBIENTE COMPARTILHADO  4h/diárias',
+      'Você pode utilizá-la de segunda a sexta-feira, das 15:30 as 19:30 ou das 19:30 as 22:30 Ao sabados das 9hs às 13hs. Exceto feriados. Wi-fi disponivel sem custo adicional',
     ],
   },
   {
     name: 'Executivo',
     description: `
-      cadeira exclusiva em ambiente compartilhado
+      mesa exclusiva em ambiente compartilhado
     `,
     title: 'Incluso:',
     list: [
@@ -65,8 +65,8 @@ export const plans: PlansProps[] = [
     ],
     value: 500,
     text: [
-      'Para você que precisa de um ambiente organizado e aconchegante para estudo ou trabalho, temos neste plano uma cadeira exclusiva  em ambiente compartilhado que Você poderá utiliza-la por 8hs diárias de segunda a sexta-feira, das 07:30 as 17:30, e sábado as 09:00 as 12h. Exceto em dias de feriados.',
-      'Disponibilizamos   Wi-fi sem custo adicional e água mineral',
+      'Para você que precisa de um ambiente organizado e aconchegante para estudo ou trabalho, temos neste plano uma mesa exclusiva em ambiente compartilhado que Você poderá utilizá-la por 8hs diárias de segunda a sexta-feira, das 07:30 as 17:30, e sábado as 09:00 as 12h. Exceto em dias de feriados.',
+      'Disponibilizamos Wi-fi sem custo adicional e água mineral',
     ],
   },
 ];
