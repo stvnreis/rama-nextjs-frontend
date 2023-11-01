@@ -12,21 +12,19 @@ export interface ContactUsProps {
 
 export function ContactUs({ className }: ContactUsProps) {
   return (
-    <div>
-      <Link
-        href={`https://wa.me/18997413773?text=${encodeURI(message)}`}
-        target="_blank"
+    <Link
+      href={`https://wa.me/18997413773?text=${encodeURI(message)}`}
+      target="_blank"
+    >
+      <Button
+        color="primary"
+        variant="solid"
+        radius="md"
+        className={`${className ?? 'text-black hidden sm:flex'}`}
       >
-        <Button
-          color="primary"
-          variant="solid"
-          radius="md"
-          className={`${className ?? 'text-black hidden sm:flex'}`}
-        >
-          {/* <Smartphone /> */}
-          <span className="sm:flex sm:text-sm">Entrar em Contato</span>
-        </Button>
-      </Link>
-    </div>
+        {/* <Smartphone /> */}
+        <span className="sm:flex sm:text-sm">Entrar em Contato</span>
+      </Button>
+    </Link>
   );
 }

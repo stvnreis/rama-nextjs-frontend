@@ -10,6 +10,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
+  Button,
 } from '@nextui-org/react';
 import React from 'react';
 
@@ -23,6 +24,10 @@ const menuItems: MenuItems[] = [
   {
     text: 'Home',
     url: '/',
+  },
+  {
+    text: 'Fazer login',
+    url: '/login',
   },
   // {
   //   text: 'Sobre nós',
@@ -75,6 +80,13 @@ export function Header() {
       <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex">
           <ContactUs />
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/login">
+            <Button variant="ghost" color="secondary">
+              Fazer Login
+            </Button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenuToggle
