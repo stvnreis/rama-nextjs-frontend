@@ -24,6 +24,7 @@ export const AboutUsText = () => {
           negócio crescer e para a nossa comunidade se integrar.
         </p>
         <p>Aproveite dessa experiência conosco.</p>
+        <b>Contratação 100% online e sem burocracia.</b>
       </div>
     </div>
   );
