@@ -18,7 +18,7 @@ export const plans: PlansProps[] = [
       'Sala Rotativa/Coworking por R$25/hora',
       'Wi-fi disponivel sem custo adicional',
     ],
-    value: 80,
+    value: 100,
     text: [
       'Oferecemos endereço de credibilidade para ESCRITORIO VIRTUAL/ENDEREÇO FISCAL E COMERCIAL para quem não pretende utilizar fisicamente nossa estrutura, mas precisa de um endereço fiscal a fim de registrar sua razão social, dados do cartão de visita, redes sociais e endereço para correspondência',
       'Muito utilizado por representantes comerciais ou por matrizes de empresas que precisam de um endereço em suas filiais.',
