@@ -6,6 +6,7 @@ import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import TanstackProvider from '../components/providers/tanstack-provider';
 import { ThemeProvider } from '../components/providers/theme-provider';
+import { SnackbarProvider } from '@/components/providers/snackbar-provider';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
@@ -23,12 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={poppins.className}>
+      <body className={poppins.className + ' min-h-screen'}>
         <TanstackProvider>
           <ThemeProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
+            <SnackbarProvider>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </SnackbarProvider>
           </ThemeProvider>
         </TanstackProvider>
       </body>

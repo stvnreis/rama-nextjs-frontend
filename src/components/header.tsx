@@ -1,5 +1,7 @@
 'use client';
 
+import {deleteCookie} from 'cookies-next'
+
 import {
   Link,
   Image,
@@ -15,6 +17,8 @@ import React from 'react';
 
 import { MenuItems } from '../types/menu-items';
 import { ContactUs } from './contact-us';
+import { User } from './user/user';
+import { useRouter } from 'next/navigation';
 
 const defaultWhatsappMessage =
   'Olá, gostaria de saber mais sobre os planos de aluguel do Ramá Business.';
@@ -24,21 +28,26 @@ const menuItems: MenuItems[] = [
     text: 'Home',
     url: '/',
   },
-  // {
-  //   text: 'Sobre nós',
-  //   url: '',
-  // },
-  // {
-  //   text: 'Planos',
-  //   url: '',
-  // },
+  {
+    text: 'Minha Conta',
+    url: '/auth'
+  }
 ];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const router = useRouter()
+
+  const handleSair = () => {
+    deleteCookie('auth')
+
+    router.push('/')
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
       className="py-3 px-10 flex sm:items-center sm:justify-center"
@@ -76,6 +85,9 @@ export function Header() {
         <NavbarItem className="hidden sm:flex">
           <ContactUs />
         </NavbarItem>
+        <NavbarItem className='hidden sm:flex'>
+          <User />
+        </NavbarItem>
       </NavbarContent>
       <NavbarMenuToggle
         aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -106,6 +118,9 @@ export function Header() {
           >
             Entrar em Contato
           </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+            <span className='text-danger-600' onClick={() => handleSair()}>Sair</span>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
