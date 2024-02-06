@@ -15,7 +15,7 @@ export const plans: PlansProps[] = [
     `,
     title: '',
     list: [
-      'Sala Rotativa/Coworking por R$25/hora',
+      'Sala Rotativa/Coworking por R$30/hora',
       'Wi-fi disponivel sem custo adicional',
     ],
     value: 100,
@@ -25,7 +25,7 @@ export const plans: PlansProps[] = [
       'Serviços adicionais como recados, recebimento de correspondencias e encomendas – valores a conferir; pacotes e valores diferenciados para locação de sala rotativa por hora para os contratantes do plano básico',
       'Oferecemos sala mobiliada e decorada em ambiente climatizado. Wi-fi disponivel sem custo adicional, sala com acesso a  portaria eletrônica, comporta ate 05 pessoas',
       'Recepção com água mineral a vontade, banheiros PNE masculino e feminino',
-      'R$ 25/h entre 07h30m e 17h30m',
+      'R$ 30/h entre 07h30m e 17h30m',
       'R$ 40/h entre 17h30m e 22h30m',
       'DESCONTOS PARA PACOTES ACIMA DE 5HS CONTRATADAS – VALORES A CONFERIR',
     ],

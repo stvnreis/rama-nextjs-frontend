@@ -70,7 +70,7 @@ export const Slider = () => {
         climatizado, moderno e arrojado
       </span>
       <span className="text-zinc-100 text-medium md:text-3xl">
-        A partir de <span className="font-bold">{money(25)}</span> /hora
+        A partir de <span className="font-bold">{money(30)}</span> /hora
       </span>
     </>,
     <>
