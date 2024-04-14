@@ -40,7 +40,7 @@ export const Slider = () => {
         salas de reunião à disposição sob demanda
       </span>
       <span className="text-zinc-100 text-medium md:text-3xl">
-        A partir de <span className="font-bold">{money(100)}</span> /mês
+        A partir de <span className="font-bold">{money(150)}</span> /mês
       </span>
     </>,
     <>
