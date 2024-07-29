@@ -16,6 +16,7 @@ export const plans: PlansProps[] = [
     title: '',
     list: [
       'Sala Rotativa/Coworking por R$30/hora',
+      'Sala para reunião por R$50/hora',
       'Wi-fi disponivel sem custo adicional',
     ],
     value: 150,
@@ -27,46 +28,47 @@ export const plans: PlansProps[] = [
       'Recepção com água mineral a vontade, banheiros PNE masculino e feminino',
       'R$ 30/h entre 07h30m e 17h30m',
       'R$ 40/h entre 17h30m e 22h30m',
+      'Sala de reunião a partir de R$ 50/h. 3 a 8 pessoas.',
       'DESCONTOS PARA PACOTES ACIMA DE 5HS CONTRATADAS – VALORES A CONFERIR',
     ],
   },
-  {
-    name: 'Essencial',
-    description: `
-      mesa exclusiva em ambiente compartilhado
-    `,
-    title: 'Incluso:',
-    list: [
-      'Segunda a Sexta das 07:30 as 11:30 ou 11:30 as 15:30 exceto feriados',
-      'Wi-fi disponivel sem custo adicional',
-      'Direito à 4 horas de uso diárias',
-    ],
-    value: 300,
-    text: [
-      'MESA EXCLUSIVA EM AMBIENTE COMPARTILHADO / 4hs diárias',
-      'Você pode utilizá-la de segunda a sexta-feira, das 07:30 as 11:30 ou das 11:30 as 15:30',
-      'Exceto feriados. Disponilbilizamos   Wi-fi sem custo adicional e agua mineral',
-      'ESSENCIAL+',
-      'MESA EXCLUSIVA EM AMBIENTE COMPARTILHADO  4h/diárias',
-      'Você pode utilizá-la de segunda a sexta-feira, das 15:30 as 19:30 ou das 19:30 as 22:30 Ao sabados das 9hs às 13hs. Exceto feriados. Wi-fi disponivel sem custo adicional',
-    ],
-  },
-  {
-    name: 'Executivo',
-    description: `
-      mesa exclusiva em ambiente compartilhado
-    `,
-    title: 'Incluso:',
-    list: [
-      'Segunda a sexta das 07:30 as 17:30',
-      'Sábado as 09:00 as 12h',
-      'Wi-fi disponivel sem custo adicional',
-      'Direito à 8 horas de uso diárias',
-    ],
-    value: 500,
-    text: [
-      'Para você que precisa de um ambiente organizado e aconchegante para estudo ou trabalho, temos neste plano uma mesa exclusiva em ambiente compartilhado que Você poderá utilizá-la por 8hs diárias de segunda a sexta-feira, das 07:30 as 17:30, e sábado as 09:00 as 12h. Exceto em dias de feriados.',
-      'Disponibilizamos Wi-fi sem custo adicional e água mineral',
-    ],
-  },
+  // {
+  //   name: 'Essencial',
+  //   description: `
+  //     mesa exclusiva em ambiente compartilhado
+  //   `,
+  //   title: 'Incluso:',
+  //   list: [
+  //     'Segunda a Sexta das 07:30 as 11:30 ou 11:30 as 15:30 exceto feriados',
+  //     'Wi-fi disponivel sem custo adicional',
+  //     'Direito à 4 horas de uso diárias',
+  //   ],
+  //   value: 300,
+  //   text: [
+  //     'MESA EXCLUSIVA EM AMBIENTE COMPARTILHADO / 4hs diárias',
+  //     'Você pode utilizá-la de segunda a sexta-feira, das 07:30 as 11:30 ou das 11:30 as 15:30',
+  //     'Exceto feriados. Disponilbilizamos   Wi-fi sem custo adicional e agua mineral',
+  //     'ESSENCIAL+',
+  //     'MESA EXCLUSIVA EM AMBIENTE COMPARTILHADO  4h/diárias',
+  //     'Você pode utilizá-la de segunda a sexta-feira, das 15:30 as 19:30 ou das 19:30 as 22:30 Ao sabados das 9hs às 13hs. Exceto feriados. Wi-fi disponivel sem custo adicional',
+  //   ],
+  // },
+  // {
+  //   name: 'Executivo',
+  //   description: `
+  //     mesa exclusiva em ambiente compartilhado
+  //   `,
+  //   title: 'Incluso:',
+  //   list: [
+  //     'Segunda a sexta das 07:30 as 17:30',
+  //     'Sábado as 09:00 as 12h',
+  //     'Wi-fi disponivel sem custo adicional',
+  //     'Direito à 8 horas de uso diárias',
+  //   ],
+  //   value: 500,
+  //   text: [
+  //     'Para você que precisa de um ambiente organizado e aconchegante para estudo ou trabalho, temos neste plano uma mesa exclusiva em ambiente compartilhado que Você poderá utilizá-la por 8hs diárias de segunda a sexta-feira, das 07:30 as 17:30, e sábado as 09:00 as 12h. Exceto em dias de feriados.',
+  //     'Disponibilizamos Wi-fi sem custo adicional e água mineral',
+  //   ],
+  // },
 ];

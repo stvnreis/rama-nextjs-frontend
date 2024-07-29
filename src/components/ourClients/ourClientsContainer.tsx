@@ -16,14 +16,6 @@ export const OurClientsContainer = () => {
           Digital Marketing
         </OurClientsCard>
         <OurClientsCard
-          imageUrl="/logo-fr-studio.png"
-          imageAlt="Logo Fernando Reis Studio Tattoo"
-          redirectUrl="#"
-        >
-          Fernando Reis <br />
-          Studio Tattoo
-        </OurClientsCard>
-        <OurClientsCard
           imageUrl="/ar3.png"
           imageAlt="Logo AR3 Advocacia"
           redirectUrl="#"
