@@ -18,11 +18,18 @@ export const OurClientsContainer = () => {
         <OurClientsCard
           imageUrl="/ar3.png"
           imageAlt="Logo AR3 Advocacia"
-          redirectUrl="#"
+          redirectUrl="https://www.instagram.com/ar3.advocacia/"
         >
           AR3
           <br />
           Assessoria e Consultoria Jurídica
+        </OurClientsCard>
+        <OurClientsCard
+          imageUrl="/logo-jrgs.jpeg"
+          imageAlt="Logo jrgs"
+          redirectUrl="https://www.instagram.com/jrgsengenharia/"
+        >
+          JRGS Engenharia
         </OurClientsCard>
       </div>
     </div>
