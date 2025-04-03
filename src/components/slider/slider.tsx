@@ -21,15 +21,6 @@ type Data = {
 };
 
 export const Slider = () => {
-  const { data } = useQuery<Data>({
-    queryKey: ['images'],
-    queryFn: async () => {
-      const { data } = await axios.get('/api/drive-images');
-
-      return data;
-    },
-  });
-
   const slideText: ReactNode[] = [
     <>
       <h2 className="secondary-text-color font-black text-lg md:text-3xl">
@@ -127,13 +118,13 @@ export const Slider = () => {
       grabCursor
       className="w-full h-[34.5rem]"
     >
-      {data?.files.map((file, index) => {
+      {Array.from({ length: 6 }).map((_, index) => {
         return (
           <div key={`${index} - ${index}`}>
             <SwiperSlide>
               <Image
-                src={`https://drive.google.com/uc?export=view&id=${file.id}`}
-                alt={file.name}
+                src={`/galeria/imagem-${index + 1}.jpeg`}
+                alt={`imagem-${index + 1}.jpeg`}
                 loading="eager"
                 fill
                 sizes="100vw"

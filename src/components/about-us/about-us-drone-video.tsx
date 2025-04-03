@@ -4,8 +4,11 @@ export const AboutUsDroneVideo = () => {
   return (
     <YouTube
       videoId="wVtuddc4_Cw"
-      opts={{ playerVars: { autoPlay: 0 } }}
+      opts={{
+        playerVars: { autoPlay: 0 },
+      }}
       onReady={_onReady}
+      className="flex items-center justify-center w-full"
     />
   );
 };

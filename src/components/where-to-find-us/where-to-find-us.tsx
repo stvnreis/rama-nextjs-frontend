@@ -10,7 +10,7 @@ export const WhereToFindUs = () => {
           instalações
         </p>
       </div>
-      <div className="w-full h-96 px-10 md:px-20 gap-5">
+      <div className="w-full h-96 gap-5">
         <Map />
       </div>
     </div>

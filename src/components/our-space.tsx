@@ -11,7 +11,7 @@ import {
 
 export const OurSpace = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-20 px-20 mt-10">
+    <div className="flex flex-col items-center justify-center gap-20 mt-10">
       <label className="text-primary section-title font-semibold">
         Por que vir para o nosso espaço?
       </label>

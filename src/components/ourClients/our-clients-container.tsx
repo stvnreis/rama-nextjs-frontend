@@ -1,4 +1,4 @@
-import { OurClientsCard } from './ourClientsCard';
+import { OurClientsCard } from './our-clients-card';
 
 export const OurClientsContainer = () => {
   return (

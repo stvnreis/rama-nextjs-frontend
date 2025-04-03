@@ -1,6 +1,6 @@
 import { plans } from '../texts/plans';
-import AditionalInformation from './aditionalInformation';
-import { PlanCards } from './planCard';
+import AditionalInformation from './aditional-information';
+import { PlanCards } from './plan-card';
 
 export const PlansContainer = () => {
   return (
@@ -8,7 +8,7 @@ export const PlansContainer = () => {
       <label className="section-title">
         Confira nosso plano para escritório virtual
       </label>
-      <div className="container flex flex-col px-8 md:flex-row items-center justify-center pt-16 gap-6">
+      <div className="container flex flex-col md:flex-row items-center justify-center pt-16 gap-6">
         {plans.map((plan, index) => {
           return (
             <PlanCards

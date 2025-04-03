@@ -1,6 +1,6 @@
 export const AboutUsText = () => {
   return (
-    <div className="flex flex-col w-full xl:w-1/2 items-center justify-center gap-3 md:items-start">
+    <div className="flex flex-col w-full items-center justify-center gap-3 md:items-start">
       <label className="text-xl font-semibold">
         Edifício comercial <span className="text-2xl">Ramá Business</span>
       </label>
