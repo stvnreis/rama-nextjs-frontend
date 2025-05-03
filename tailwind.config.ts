@@ -7,7 +7,7 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'class',
+  darkMode: ['class', 'class'],
   theme: {
     container: {
       center: true,
@@ -37,6 +37,7 @@ const config: Config = {
         },
       },
     }),
+    require('tailwindcss-animate'),
   ],
 };
 export default config;

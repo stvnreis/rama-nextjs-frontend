@@ -1,6 +1,6 @@
 import { Card, CardBody } from '@nextui-org/react';
 
-export default function AditionalInformation() {
+export default function InformacoesAdicionaisCard() {
   return (
     <Card
       className="mt-10 w-full lg:w-[50rem] border-[0.5px] border-primary"

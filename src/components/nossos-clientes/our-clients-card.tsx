@@ -1,4 +1,5 @@
-import { Card, CardBody, CardFooter, Image, Link } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, Link } from '@nextui-org/react';
+import Image from 'next/image';
 import { ReactNode } from 'react';
 
 type OurClientsCardProps = {

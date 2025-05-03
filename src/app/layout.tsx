@@ -4,18 +4,17 @@ import { Poppins } from 'next/font/google';
 
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
-import TanstackProvider from '../components/providers/tanstack-provider';
-import { ThemeProvider } from '../components/providers/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: 'Ramá Business',
-  // description: 'Ramá Business',
   verification: {
     google: 'nl5SDpD6JMyS19n_Qt6M-y8oxACazKeUUuzJnnKsFTc',
   },
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -24,13 +23,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={poppins.className}>
-        <TanstackProvider>
-          <ThemeProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </ThemeProvider>
-        </TanstackProvider>
+        <main className="h-[100dvh]">
+          <Header />
+          {children}
+          <Footer />
+          <Toaster />
+        </main>
       </body>
     </html>
   );

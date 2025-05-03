@@ -10,6 +10,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
+  Button,
 } from '@nextui-org/react';
 import React from 'react';
 
@@ -24,14 +25,6 @@ const menuItems: MenuItems[] = [
     text: 'Home',
     url: '/',
   },
-  // {
-  //   text: 'Sobre nós',
-  //   url: '',
-  // },
-  // {
-  //   text: 'Planos',
-  //   url: '',
-  // },
 ];
 
 export function Header() {
@@ -55,26 +48,15 @@ export function Header() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      {/* <NavbarContent className="hidden sm:flex gap-5" justify="center">
-        {menuItems.map((item, index) => (
-          <NavbarItem
-            key={`${item.text} - ${index}`}
-            className="cursor-pointer text-foreground navbar-link"
-          >
-            {/* <Link
-              color="foreground"
-              className="w-full navbar-link"
-              href={item.url}
-              size="lg"
-            > */}
-      {/* {item.text} */}
-      {/* </Link> */}
-      {/* </NavbarItem> */}
-      {/* )) */}
-      {/* </NavbarContent> */}
       <NavbarContent justify="end">
-        <NavbarItem className="hidden sm:flex">
+        <NavbarItem
+          className="hidden sm:flex gap-2
+        "
+        >
           <ContactUs />
+          <Link href="/agendar-horario">
+            <Button className="bg-zinc-900 text-white">Agendar sala</Button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenuToggle

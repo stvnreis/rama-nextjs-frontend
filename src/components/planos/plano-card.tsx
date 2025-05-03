@@ -17,12 +17,12 @@ import { PlansProps } from '../texts/plans';
 
 import { CheckCircle2 } from 'lucide-react';
 
-export interface CardProps {
+export interface PlanoCardProps {
   isMiddleCard: boolean;
-  plan: PlansProps;
+  plano: PlansProps;
 }
 
-export function PlanCards({ plan, isMiddleCard }: CardProps) {
+export function PlanoCard({ plano, isMiddleCard }: PlanoCardProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -36,25 +36,25 @@ export function PlanCards({ plan, isMiddleCard }: CardProps) {
       shadow="md"
     >
       <CardHeader className="flex flex-col items-start">
-        <label className="text-sm font-semibold">{plan.name}</label>
+        <label className="text-sm font-semibold">{plano.name}</label>
         <div className="text-2xl font-bold">
-          {money(plan.value)}
+          {money(plano.value)}
           <span className="text-primary">/mês</span>
         </div>
         <span className="text-sm italic dark:text-zinc-400 text-zinc-600 text-left">
-          {plan.description}
+          {plano.description}
         </span>
       </CardHeader>
       <CardBody className="flex flex-col gap-3">
         <span
           className={`text-sm font-semibold ${
-            plan.title === '' ? 'hidden' : ''
+            plano.title === '' ? 'hidden' : ''
           }`}
         >
-          {plan.title}
+          {plano.title}
         </span>
         <ul>
-          {plan.list.map((item, index) => {
+          {plano.list.map((item, index) => {
             return (
               <li
                 key={`${item} - ${index}`}
@@ -94,10 +94,10 @@ export function PlanCards({ plan, isMiddleCard }: CardProps) {
             {(onClose) => (
               <>
                 <ModalHeader className="flex flex-col gap-1">
-                  Plano {plan.name}
+                  Plano {plano.name}
                 </ModalHeader>
                 <ModalBody>
-                  {plan.text.map((text, index) => (
+                  {plano.text.map((text, index) => (
                     <p key={`${text} - ${index}`}>{text}</p>
                   ))}
                 </ModalBody>
