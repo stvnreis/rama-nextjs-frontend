@@ -102,7 +102,7 @@ export const Slider = () => {
       grabCursor
       className="w-full h-[34.5rem]"
     >
-      {Array.from({ length: 6 }).map((_, index) => {
+      {Array.from({ length: 5 }).map((_, index) => {
         return (
           <div key={`${index} - ${index}`}>
             <SwiperSlide>
