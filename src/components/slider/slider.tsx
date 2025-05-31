@@ -45,15 +45,6 @@ export const Slider = () => {
     </>,
     <>
       <h2 className="secondary-text-color font-black text-lg md:text-3xl">
-        RECEPÇÃO MOBILIADA
-      </h2>
-      <span className="text-medium md:text-lg font-normal text-center w-[25rem] md:w-[45rem]">
-        Mini recepção localizada no segundo pavimento para uso de assinantes das
-        salas corporativas
-      </span>
-    </>,
-    <>
-      <h2 className="secondary-text-color font-black text-lg md:text-3xl">
         SALA COMPARTILHADA
       </h2>
       <span className="text-medium md:text-lg font-normal text-center w-[25rem] md:w-[45rem]">
