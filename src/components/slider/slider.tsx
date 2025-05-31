@@ -9,16 +9,9 @@ import React, { ReactNode } from 'react';
 
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 
-import { DriveFile } from '@/types/drive-files';
 import { money } from '@/utils/format';
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
 import { Instagram, Facebook } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-type Data = {
-  files: DriveFile[];
-};
 
 export const Slider = () => {
   const slideText: ReactNode[] = [
