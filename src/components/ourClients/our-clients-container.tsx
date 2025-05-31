@@ -24,13 +24,6 @@ export const OurClientsContainer = () => {
           <br />
           Assessoria e Consultoria Jurídica
         </OurClientsCard>
-        <OurClientsCard
-          imageUrl="/logo-jrgs.jpeg"
-          imageAlt="Logo jrgs"
-          redirectUrl="https://www.instagram.com/jrgsengenharia/"
-        >
-          JRGS Engenharia
-        </OurClientsCard>
       </div>
     </div>
   );
